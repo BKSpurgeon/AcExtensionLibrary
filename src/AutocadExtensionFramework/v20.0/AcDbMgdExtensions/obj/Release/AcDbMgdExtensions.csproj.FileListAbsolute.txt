@@ -1,0 +1,5 @@
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\bin\v20.0\AcDbMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\bin\v20.0\AcDbMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcDbMgdExtensions\obj\Release\AcDbMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcDbMgdExtensions\obj\Release\AcDbMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcDbMgdExtensions\obj\Release\AcDbMgdExtensions.csprojResolveAssemblyReference.cache

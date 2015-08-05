@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AEFvbSamples
+</name>
+</assembly>
+<members>
+<member name="M:AEFvbSamples.TestCommands.PrintLayers">
+	<summary>
+ Command for printing layers
+ </summary>
+</member><member name="M:AEFvbSamples.TestCommands.PrintBlocks">
+	<summary>
+ Command for printing Blocks
+ </summary>
+</member><member name="M:AEFvbSamples.TestCommands.PrintGroups">
+	<summary>
+ Command for printing Groups and uses a class that wraps a DBDictionary for GroupDictionary
+ </summary>
+</member><member name="M:AEFvbSamples.TestCommands.PrintGroups2">
+	<summary>
+ Just uses extension methods unlike above
+ </summary>
+</member><member name="M:AEFvbSamples.TestCommands.PrintLinesLength">
+	<summary>
+ Print line length for each line
+ </summary>
+</member><member name="M:AEFvbSamples.TestCommands.PrintTotalLinesLength">
+	<summary>
+ Get total length of all lines in model space
+ </summary>
+</member><member name="P:AEFvbSamples.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AEFvbSamples.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:AEFvbSamples.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

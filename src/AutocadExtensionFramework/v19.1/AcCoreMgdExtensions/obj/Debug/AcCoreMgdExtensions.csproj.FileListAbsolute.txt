@@ -1,0 +1,5 @@
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\bin\v19.1\Debug\AcCoreMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\bin\v19.1\Debug\AcCoreMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.pdb
