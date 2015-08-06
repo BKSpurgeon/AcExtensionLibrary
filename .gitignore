@@ -49,6 +49,9 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
+*.csproj.FileListAbsolute.txt
+*.csprojResolveAssemblyReference.cache
+*.pdb.original
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
