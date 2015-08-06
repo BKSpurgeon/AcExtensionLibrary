@@ -45,10 +45,6 @@
       <HintPath>..\..\..\..\libs\Acad\v19.1\AcCoreMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="AcCoreMgdExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\bin\v19.1\Release\AcCoreMgdExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="AcDbMgd">
       <HintPath>..\..\..\..\libs\Acad\v19.1\AcDbMgd.dll</HintPath>
       <Private>False</Private>

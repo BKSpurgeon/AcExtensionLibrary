@@ -20,10 +20,10 @@ namespace Autodesk.AutoCAD.Runtime
             catch (System.Exception ex)
             {
                 Console.Beep();
-                Application.DocumentManager.MdiActiveDocument.Editor.WriteLine("\nAn error occured while loading {0}:\n\n{1}",
-                  this.GetType().Assembly.Location,
-                  ex.ToString()
-                );
+                //Application.DocumentManager.MdiActiveDocument.Editor.WriteLine("\nAn error occured while loading {0}:\n\n{1}",
+                  //this.GetType().Assembly.Location,
+                  //ex.ToString()
+                //);
                 throw;
             }
         }

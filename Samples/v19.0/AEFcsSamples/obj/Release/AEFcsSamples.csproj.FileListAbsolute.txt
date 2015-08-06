@@ -59,3 +59,16 @@ C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\Sam
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Release\AEFcsSamples.csprojResolveAssemblyReference.cache
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Release\AEFcsSamples.dll
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Release\AEFcsSamples.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AEFcsSamples.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AEFcsSamples.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AcCoreMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AcDbMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AcMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\MsCoreLibraryExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AcCoreMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AcDbMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\AcMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Release\MsCoreLibraryExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Release\AEFcsSamples.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Release\AEFcsSamples.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Release\AEFcsSamples.pdb

@@ -217,10 +217,10 @@ namespace Autodesk.AutoCAD.DatabaseServices
         {
             return btr.GetAllBlockReferenceIds(btr.Database.TransactionManager.TopTransaction, directOnly, forceValidity);
         }
-        public static void CreatePreviewIcon(this BlockTableRecord btr)
-        {
-            Application.DocumentManager.MdiActiveDocument.Editor.AcedCmd("_.BLOCKICON", btr.Name);
-        }
+        //public static void CreatePreviewIcon(this BlockTableRecord btr)
+        //{
+        //    Application.DocumentManager.MdiActiveDocument.Editor.AcedCmd("_.BLOCKICON", btr.Name);
+        //}
      public static IEnumerable<AttributeDefinition> GetAttributeDefinitions(this BlockTableRecord btr, Transaction trx, OpenMode mode = OpenMode.ForRead, bool includingErased = false, bool openObjectsOnLockedLayers = false)
      {
 

@@ -177,12 +177,6 @@
     <Compile Include="Runtime\InvalidContextException.cs" />
     <Compile Include="Runtime\NoActiveTransactionException.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AcCoreMgdExtensions\AcCoreMgdExtensions.csproj">
-      <Project>{6B5DBE4E-8E27-4B57-9D20-7A5D11F3EC2E}</Project>
-      <Name>AcCoreMgdExtensions</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

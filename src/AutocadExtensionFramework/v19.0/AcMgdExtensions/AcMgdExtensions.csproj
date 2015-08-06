@@ -114,9 +114,17 @@
       <HintPath>..\..\..\..\libs\Acad\v19.0\AcCoreMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="AcCoreMgdExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\v19.0\Release\AcCoreMgdExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="AcDbMgd">
       <HintPath>..\..\..\..\libs\Acad\v19.0\AcDbMgd.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="AcDbMgdExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\v19.0\Release\AcDbMgdExtensions.dll</HintPath>
     </Reference>
     <Reference Include="AcMgd">
       <HintPath>..\..\..\..\libs\Acad\v19.0\AcMgd.dll</HintPath>
@@ -135,17 +143,6 @@
     <Compile Include="ApplicationServices\DocumentExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ApplicationServices\StringExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AcCoreMgdExtensions\AcCoreMgdExtensions.csproj">
-      <Project>{6B5DBE4E-8E27-4B57-9D20-7A5D11F3EC2E}</Project>
-      <Name>AcCoreMgdExtensions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AcDbMgdExtensions\AcDbMgdExtensions.csproj">
-      <Project>{1364E3A9-FD96-443E-B00E-530C4E3642DA}</Project>
-      <Name>AcDbMgdExtensions</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

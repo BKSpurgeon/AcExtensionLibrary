@@ -153,7 +153,9 @@
     <Reference Include="AcDbMgdExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\bin\v19.0\Release\AcDbMgdExtensions.dll</HintPath>
-      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcMgdExtensions">
+      <HintPath>..\..\..\..\bin\v19.0\Debug\AcMgdExtensions.dll</HintPath>
     </Reference>
     <Reference Include="MsCoreLibraryExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

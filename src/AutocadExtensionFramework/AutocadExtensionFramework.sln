@@ -19,8 +19,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcCoreMgdExtensions", "v19.0\AcCoreMgdExtensions\AcCoreMgdExtensions.csproj", "{6B5DBE4E-8E27-4B57-9D20-7A5D11F3EC2E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1364E3A9-FD96-443E-B00E-530C4E3642DA} = {1364E3A9-FD96-443E-B00E-530C4E3642DA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcMgdExtensions", "v19.0\AcMgdExtensions\AcMgdExtensions.csproj", "{D9EB1BA3-4C5A-48A8-B7C1-EFAEBB570515}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6B5DBE4E-8E27-4B57-9D20-7A5D11F3EC2E} = {6B5DBE4E-8E27-4B57-9D20-7A5D11F3EC2E}
+		{1364E3A9-FD96-443E-B00E-530C4E3642DA} = {1364E3A9-FD96-443E-B00E-530C4E3642DA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEFcsSamples", "..\..\Samples\v19.0\AEFcsSamples\AEFcsSamples.csproj", "{13532D90-CC59-4B2F-9B45-69C03B457D7D}"
 EndProject
