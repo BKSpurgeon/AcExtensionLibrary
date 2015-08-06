@@ -3,3 +3,8 @@ C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\bin
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.csprojResolveAssemblyReference.cache
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.dll
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v20.0\AcCoreMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v20.0\AcCoreMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.pdb

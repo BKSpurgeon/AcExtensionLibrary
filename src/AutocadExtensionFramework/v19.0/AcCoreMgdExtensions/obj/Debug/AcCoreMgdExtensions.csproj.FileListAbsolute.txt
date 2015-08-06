@@ -48,3 +48,9 @@ C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\bin
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.csprojResolveAssemblyReference.cache
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.dll
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v19.0\Debug\CodeContracts\AcCoreMgdExtensions.noReferenceAssembly
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v19.0\Debug\AcCoreMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v19.0\Debug\AcCoreMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.0\AcCoreMgdExtensions\obj\Debug\AcCoreMgdExtensions.pdb

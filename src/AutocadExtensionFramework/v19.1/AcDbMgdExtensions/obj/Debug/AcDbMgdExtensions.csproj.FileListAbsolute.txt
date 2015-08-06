@@ -33,3 +33,7 @@ C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\bin
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.dll
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.pdb
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\Hpad\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v19.1\Debug\AcDbMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v19.1\Debug\AcDbMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.dll
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v19.1\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.pdb
