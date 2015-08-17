@@ -61,9 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\common\contracts\ContractExtensions.cs">
-      <Link>Common\Contracts\ContractExtensions.cs</Link>
-    </Compile>
     <Compile Include="DatabaseServices\TypedValueExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
