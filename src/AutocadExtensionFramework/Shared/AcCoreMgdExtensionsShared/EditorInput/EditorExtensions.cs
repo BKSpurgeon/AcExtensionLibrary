@@ -361,9 +361,9 @@ namespace Autodesk.AutoCAD.EditorInput
 
             try
             {
-                if (!options.IsNull())
+                if (options != null)
                 {
-                    if (!filter.IsNull())
+                    if (filter != null)
                     {
                        return ed.GetSelection(options, filter);
                     }
@@ -372,7 +372,7 @@ namespace Autodesk.AutoCAD.EditorInput
                         return ed.GetSelection(options);
                     }
                 }
-                else if (!filter.IsNull())
+                else if (filter != null)
                 {
                     return ed.GetSelection(filter);
                 }

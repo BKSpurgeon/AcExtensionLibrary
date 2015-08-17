@@ -42,11 +42,11 @@ namespace Autodesk.AutoCAD.EditorInput
         public AcedCmd(string commandName, params object[] arguments)
             : this(commandName)
         {
-            if (arguments.IsNull()) return;
+            if (arguments == null) return;
             for (int i = 0; i < arguments.Count(); i++)
             {
                 var argument = arguments[i];
-                if (argument.IsNull())
+                if (argument == null)
                 {
                     throw new ArgumentNullException(String.Format("{0} argument is null", (i + 1)));
                 }

@@ -40,5 +40,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\WrapperDBDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\Wrappers\WrapperDBDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Geometry\Point3dExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ObjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.cs" />
   </ItemGroup>
 </Project>

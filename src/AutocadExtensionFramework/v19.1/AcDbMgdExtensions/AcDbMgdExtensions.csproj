@@ -49,9 +49,6 @@
       <HintPath>..\..\..\..\libs\Acad\v19.1\AcDbMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="MsCoreLibraryExtensions">
-      <HintPath>..\..\..\..\..\MsCoreLibraryExtensions\bin\4.0\Release\MsCoreLibraryExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

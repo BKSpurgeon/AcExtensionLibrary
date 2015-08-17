@@ -38,10 +38,6 @@
       <HintPath>..\..\..\..\libs\Acad\v20.0\AcDbMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="MsCoreLibraryExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MsCoreLibraryExtensions\bin\4.5\Release\MsCoreLibraryExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

@@ -158,7 +158,8 @@ namespace Autodesk.AutoCAD.ApplicationServices.Core
             {
                 get
                 {
-                    if (name.IsNullOrWhiteSpace())
+                    
+                    if (String.IsNullOrWhiteSpace(name))
                     {
                         throw new ArgumentNullException("{0} is Empty or Null", name);
                     }
