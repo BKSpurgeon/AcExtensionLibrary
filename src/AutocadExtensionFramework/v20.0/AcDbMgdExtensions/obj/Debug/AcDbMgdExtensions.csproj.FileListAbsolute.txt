@@ -7,3 +7,4 @@ C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramewo
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\bin\v20.0\AcDbMgdExtensions.pdb
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.dll
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.pdb
+C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\src\AutocadExtensionFramework\v20.0\AcDbMgdExtensions\obj\Debug\AcDbMgdExtensions.csprojResolveAssemblyReference.cache

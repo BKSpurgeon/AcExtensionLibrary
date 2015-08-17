@@ -50,17 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationServices\ApplicationExtensions.cs" />
-    <Compile Include="ApplicationServices\CommandTransaction.cs" />
-    <Compile Include="ApplicationServices\Core\ITransactionManager.cs" />
-    <Compile Include="ApplicationServices\Core\SupportFiles.cs" />
-    <Compile Include="ApplicationServices\Core\SystemVariables.cs" />
-    <Compile Include="ApplicationServices\Core\TemporaryVariables.cs" />
-    <Compile Include="ApplicationServices\TransactionManagerExtensions.cs" />
     <Compile Include="EditorInput\AcedCmd.cs" />
     <Compile Include="EditorInput\AcedCmdArg.cs" />
     <Compile Include="EditorInput\AcedCmdResultBuffer.cs" />
-    <Compile Include="EditorInput\AllowedClassFilter.cs" />
+    <Compile Include="ApplicationServices\Core\SystemVariables.cs" />
+    <Compile Include="ApplicationServices\Core\TemporaryVariables.cs" />
     <Compile Include="EditorInput\EdCmd.cs" />
     <Compile Include="EditorInput\EditorExtensions.cs" />
     <Compile Include="EditorInput\IAcedCmd.cs" />
@@ -73,15 +67,10 @@
     <Compile Include="EditorInput\PromptDoubleArgument.cs" />
     <Compile Include="EditorInput\PromptEntityArgument.cs" />
     <Compile Include="EditorInput\PromptIntegerArgument.cs" />
-    <Compile Include="EditorInput\PromptKeywords.cs" />
     <Compile Include="EditorInput\PromptPointArgument.cs" />
     <Compile Include="EditorInput\PromptSelectionArgument.cs" />
     <Compile Include="EditorInput\PromptStringArgument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Runtime\CommandClass.cs" />
-    <Compile Include="Runtime\CommandTransaction.cs" />
-    <Compile Include="Runtime\ICommandClass.cs" />
-    <Compile Include="Runtime\IDocumentCommandClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AcDbMgdExtensions\AcDbMgdExtensions.csproj">
@@ -89,6 +78,8 @@
       <Name>AcDbMgdExtensions</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
+  <Import Project="..\..\Shared\AcCoreMgdExtensionsShared\AcCoreMgdExtensionsShared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

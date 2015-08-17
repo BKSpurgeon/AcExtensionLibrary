@@ -54,15 +54,7 @@
     <Compile Include="ApplicationServices\Core\EnviromentVariables.cs" />
     <Compile Include="ApplicationServices\Core\SystemVariables.cs" />
     <Compile Include="ApplicationServices\Core\TemporaryVariables.cs" />
-    <Compile Include="ApplicationServices\TransactionManagerExtensions.cs" />
-    <Compile Include="EditorInput\AllowedClassFilter.cs" />
-    <Compile Include="EditorInput\EditorExtensions.cs" />
-    <Compile Include="EditorInput\PromptKeywords.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Runtime\CommandClass.cs" />
-    <Compile Include="Runtime\ExtensionApplication.cs" />
-    <Compile Include="Runtime\ICommandClass.cs" />
-    <Compile Include="Runtime\LockedTransaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AcDbMgdExtensions\AcDbMgdExtensions.csproj">
@@ -70,6 +62,7 @@
       <Name>AcDbMgdExtensions</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\Shared\AcCoreMgdExtensionsShared\AcCoreMgdExtensionsShared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

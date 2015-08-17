@@ -96,6 +96,5 @@ C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramewo
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Debug\AcMgdExtensions.pdb
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\bin\Debug\MsCoreLibraryExtensions.pdb
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Debug\AEFcsSamples.csprojResolveAssemblyReference.cache
-C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Debug\AEFcsSamples.rewritten
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Debug\AEFcsSamples.dll
 C:\Users\Jeff\Documents\DevProjects\HpadGroup\OpenSource\AutocadExtensionFramework\Samples\v19.0\AEFcsSamples\obj\Debug\AEFcsSamples.pdb

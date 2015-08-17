@@ -64,45 +64,11 @@
     <Compile Include="..\..\..\..\common\contracts\ContractExtensions.cs">
       <Link>Common\Contracts\ContractExtensions.cs</Link>
     </Compile>
-    <Compile Include="DatabaseServices\AnnotationScaleExtensions.cs" />
-    <Compile Include="DatabaseServices\Block.cs" />
-    <Compile Include="DatabaseServices\BlockReferenceExtensions.cs" />
-    <Compile Include="DatabaseServices\BlockTableExtensions.cs" />
-    <Compile Include="DatabaseServices\BlockTableRecordExtensions.cs" />
-    <Compile Include="DatabaseServices\Contracts\TransactionContracts.cs" />
-    <Compile Include="DatabaseServices\Contracts\TypeContracts.cs" />
-    <Compile Include="DatabaseServices\CurveExtensions.cs" />
-    <Compile Include="DatabaseServices\DatabaseExtensions.cs" />
-    <Compile Include="DatabaseServices\DBDictionaryExtensions.cs" />
-    <Compile Include="DatabaseServices\DBObjectExtensions.cs" />
-    <Compile Include="DatabaseServices\DimStyleTableExtensions.cs" />
-    <Compile Include="DatabaseServices\Enums.cs" />
-    <Compile Include="DatabaseServices\Extents3dExtensions.cs" />
-    <Compile Include="DatabaseServices\GroupDictionary.cs" />
-    <Compile Include="DatabaseServices\InternalExtensions\SymbolTableWrapper.cs" />
-    <Compile Include="DatabaseServices\LayerTableExtensions.cs" />
-    <Compile Include="DatabaseServices\LayerTableRecordExtensions.cs" />
-    <Compile Include="DatabaseServices\LayoutDictionary.cs" />
-    <Compile Include="DatabaseServices\LockedTransaction.cs" />
-    <Compile Include="DatabaseServices\MLStyleDictionary.cs" />
-    <Compile Include="DatabaseServices\ObjectIdCollectionExtensions.cs" />
-    <Compile Include="DatabaseServices\ObjectIdExtensions.cs" />
-    <Compile Include="DatabaseServices\ObjectOverrule.cs" />
-    <Compile Include="DatabaseServices\OsnapOverrule.cs" />
-    <Compile Include="DatabaseServices\ProxyEntityExtensions.cs" />
-    <Compile Include="DatabaseServices\ProxyObjectExtensions.cs" />
-    <Compile Include="DatabaseServices\SymbolTableExtensions.cs" />
-    <Compile Include="DatabaseServices\SymbolTableRecordExtensions.cs" />
-    <Compile Include="DatabaseServices\TextStyleTableExtensions.cs" />
     <Compile Include="DatabaseServices\TypedValueExtensions.cs" />
-    <Compile Include="DatabaseServices\Wrappers\Transaction.cs" />
-    <Compile Include="DatabaseServices\Wrappers\WrapperDBDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Runtime\ExtensionApplication.cs" />
-    <Compile Include="Runtime\InvalidContextException.cs" />
-    <Compile Include="Runtime\NoActiveTransactionException.cs" />
   </ItemGroup>
   <ItemGroup />
+  <Import Project="..\..\Shared\AcDbMgdExtensionsShared\AcDbMgdExtensionsShared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

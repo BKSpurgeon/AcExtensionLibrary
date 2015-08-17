@@ -7,6 +7,8 @@ using Autodesk.AutoCAD.ApplicationServices.Core;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.Runtime;
+using Exception = Autodesk.AutoCAD.Runtime.Exception;
+
 namespace Autodesk.AutoCAD.EditorInput
 {
     public class AcedCmd : IAcedCmd
@@ -88,7 +90,7 @@ namespace Autodesk.AutoCAD.EditorInput
         {
             if (Application.DocumentManager.IsApplicationContext)
             {
-                throw new InvalidContextException("Requires Document context");
+                throw new Exception(ErrorStatus.InvalidContext);
             }
             if (!Settings.Variables.NEXTFIBERWORLD)
             {

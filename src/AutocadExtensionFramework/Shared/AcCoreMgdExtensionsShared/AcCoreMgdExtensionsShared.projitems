@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b107a250-7c8d-4db2-b991-7646ec967df3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AcCoreMgdExtensionsShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ApplicationServices\TransactionManagerExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EditorInput\AllowedClassFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EditorInput\EditorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EditorInput\PromptKeywords.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Runtime\CommandClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Runtime\ExtensionApplication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Runtime\ICommandClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Runtime\LockedTransaction.cs" />
+  </ItemGroup>
+</Project>

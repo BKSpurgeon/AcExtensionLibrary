@@ -51,23 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationServices\PreferencesDisplay\DisplayScrollBars.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\AcadDirectory.cs" />
-    <Compile Include="ApplicationServices\ApplicationExtensions.cs" />
     <Compile Include="ApplicationServices\DocumentExtensions.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\EnterpriseMenuFile.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\IAcadPathRepository.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\MenuFile.cs" />
-    <Compile Include="ApplicationServices\Preferences.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\PageSetupOverridesTemplateFile.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\PrinterConfigPath.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\PrinterDescPath.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\PrinterStyleSheetPath.cs" />
-    <Compile Include="ApplicationServices\PreferencesUser\SCMTimeValue.cs" />
-    <Compile Include="ApplicationServices\StringExtensions.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\SupportPath.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\TemplateDWGPath.cs" />
-    <Compile Include="ApplicationServices\PreferencesFiles\ToolPalettePath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +64,7 @@
       <Name>AcDbMgdExtensions</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\Shared\AcMgdExtensionsShared\AcMgdExtensionsShared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
