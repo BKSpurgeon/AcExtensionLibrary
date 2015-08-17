@@ -10,16 +10,16 @@ namespace Autodesk.AutoCAD.ApplicationServices
 {
    public static class TransactionManagerExtensions
     {
-       public static LockedTransaction StarLockedTransaction(this TransactionManager tm)
+       public static Runtime.LockedTransaction StarLockedTransaction(this TransactionManager tm)
        {
            DocumentLock doclock = Application.DocumentManager.MdiActiveDocument.LockDocument();
-           return new LockedTransaction(tm.StartTransaction(), doclock);
+           return new Runtime.LockedTransaction(tm.StartTransaction(), doclock);
        }
 
-       public static LockedTransaction StarLockedTransaction(this TransactionManager tm, DocumentLockMode lockMode, string globalCommandName, string localCommandName, bool promptIfFails)
+       public static Runtime.LockedTransaction StarLockedTransaction(this TransactionManager tm, DocumentLockMode lockMode, string globalCommandName, string localCommandName, bool promptIfFails)
        {
            DocumentLock doclock = Application.DocumentManager.MdiActiveDocument.LockDocument(lockMode, globalCommandName, localCommandName, promptIfFails);
-           return new LockedTransaction(tm.StartTransaction(), doclock);
+           return new Runtime.LockedTransaction(tm.StartTransaction(), doclock);
        }
     }
 }
