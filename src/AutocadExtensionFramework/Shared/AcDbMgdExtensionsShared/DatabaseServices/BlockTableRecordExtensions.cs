@@ -26,6 +26,13 @@ namespace Autodesk.AutoCAD.DatabaseServices
                 );
         }
 
+        /// <summary>
+        /// User Created Blocks are any blocks that are created by user or from a user block created by a user. It
+        /// This includes anonymous blocks
+        ///
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
         public static IEnumerable<BlockTableRecord> UserCreatedBlocks(this IEnumerable<BlockTableRecord> source)
         {
             return source.Where(btr =>
@@ -55,7 +62,12 @@ namespace Autodesk.AutoCAD.DatabaseServices
                 );
         }
 
-
+        /// <summary>
+        /// Returns a enumerable of ObjectsIds contained 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="btr"></param>
+        /// <returns></returns>
         public static IEnumerable<ObjectId> GetObjectIds<T>(this BlockTableRecord btr) where T : Entity
         {
             IntPtr impobj = RXClass.GetClass(typeof (T)).UnmanagedObject;

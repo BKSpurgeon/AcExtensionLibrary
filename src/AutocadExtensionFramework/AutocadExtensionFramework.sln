@@ -56,6 +56,10 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AcCoreMgdExtensionsShared",
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AcMgdExtensionsShared", "Shared\AcMgdExtensionsShared\AcMgdExtensionsShared.shproj", "{7159F1FF-A35B-49DE-B90C-48608F5EF95B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v20.1", "v20.1", "{331C046A-0C1C-45D1-B2A5-284FD9E6C3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEFcsSamples", "..\..\Samples\v20.1\AEFcsSamples\AEFcsSamples.csproj", "{7F701877-A80B-43A5-991C-B959EBEDAE9A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\AcDbMgdExtensionsShared\AcDbMgdExtensionsShared.projitems*{5bc2cac4-8311-43f0-ada2-59905d7f56b0}*SharedItemsImports = 4
@@ -157,6 +161,12 @@ Global
 		{65DE7EA8-3381-45B4-B7AB-0AF92DFCDA35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65DE7EA8-3381-45B4-B7AB-0AF92DFCDA35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65DE7EA8-3381-45B4-B7AB-0AF92DFCDA35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F701877-A80B-43A5-991C-B959EBEDAE9A}.Debug(Static Contract Checking)|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F701877-A80B-43A5-991C-B959EBEDAE9A}.Debug(Static Contract Checking)|Any CPU.Build.0 = Debug|Any CPU
+		{7F701877-A80B-43A5-991C-B959EBEDAE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F701877-A80B-43A5-991C-B959EBEDAE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F701877-A80B-43A5-991C-B959EBEDAE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F701877-A80B-43A5-991C-B959EBEDAE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -179,5 +189,7 @@ Global
 		{F878726B-4FCE-4108-AD94-5861A1FFC439} = {765256DE-3CDC-4AEC-81AE-CD5213A24107}
 		{B107A250-7C8D-4DB2-B991-7646EC967DF3} = {765256DE-3CDC-4AEC-81AE-CD5213A24107}
 		{7159F1FF-A35B-49DE-B90C-48608F5EF95B} = {765256DE-3CDC-4AEC-81AE-CD5213A24107}
+		{331C046A-0C1C-45D1-B2A5-284FD9E6C3A3} = {B3D1FC0F-FE6F-4D33-97E8-EEA7EAE92E1E}
+		{7F701877-A80B-43A5-991C-B959EBEDAE9A} = {331C046A-0C1C-45D1-B2A5-284FD9E6C3A3}
 	EndGlobalSection
 EndGlobal

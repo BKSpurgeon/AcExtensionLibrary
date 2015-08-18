@@ -6,6 +6,12 @@ namespace Autodesk.AutoCAD.DatabaseServices
 {
     public static class BlockReferenceExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="blockref"></param>
+        /// <param name="trx"></param>
+        /// <returns></returns>
         public static BlockTableRecord GetEffectiveBlockTableRecord(this BlockReference blockref, Transaction trx)
         {
             if (blockref.IsDynamicBlock)

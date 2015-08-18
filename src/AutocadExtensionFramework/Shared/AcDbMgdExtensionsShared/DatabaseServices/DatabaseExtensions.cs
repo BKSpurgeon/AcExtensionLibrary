@@ -4,10 +4,23 @@ using Exception = Autodesk.AutoCAD.Runtime.Exception;
 
 namespace Autodesk.AutoCAD.DatabaseServices
 {
+    /// <summary>
+    /// Extension class for Database object
+    /// </summary>
+    /// 
+
     public static class DatabaseExtensions
     {
         private static string standard = "Standard";
 
+        /// <summary>
+        /// Opens the BlockTable
+        /// </summary>
+        /// <code></code>
+        /// <param name="db"></param>
+        /// <param name="trx"></param>
+        /// <param name="mode"></param>
+        /// <returns></returns>
         public static BlockTable BlockTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
         {
             if (trx == null)
