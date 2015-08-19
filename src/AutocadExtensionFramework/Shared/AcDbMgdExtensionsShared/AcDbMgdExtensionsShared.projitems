@@ -6,7 +6,7 @@
     <SharedGUID>f878726b-4fce-4108-ad94-5861a1ffc439</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>AcDbMgdExtensionsShared</Import_RootNamespace>
+    <Import_RootNamespace>Autodesk.AutoCAD</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\AnnotationScaleExtensions.cs" />
@@ -39,8 +39,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\TextStyleTableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\WrapperDBDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\Wrappers\WrapperDBDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_Extensions\Drawing\BitmapExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_Extensions\ObjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Geometry\Point3dExtension.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ObjectExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.cs" />
   </ItemGroup>
 </Project>

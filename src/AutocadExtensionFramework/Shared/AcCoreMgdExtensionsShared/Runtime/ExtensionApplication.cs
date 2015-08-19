@@ -1,16 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Autodesk.AutoCAD.ApplicationServices.Core;
+﻿using Autodesk.AutoCAD.ApplicationServices.Core;
 using Autodesk.AutoCAD.EditorInput;
+using System;
+
 namespace Autodesk.AutoCAD.Runtime
 {
+    /// <summary>
+    ///
+    /// </summary>
     public abstract class ExtensionApplication : IExtensionApplication
     {
+        /// <summary>
+        /// Initializes this instance.
+        /// </summary>
         public abstract void Initialize();
+
+        /// <summary>
+        /// Terminates this instance.
+        /// </summary>
         public abstract void Terminate();
 
+        /// <summary>
+        /// Initializes this instance.
+        /// </summary>
         void IExtensionApplication.Initialize()
         {
             try
@@ -28,10 +39,12 @@ namespace Autodesk.AutoCAD.Runtime
             }
         }
 
+        /// <summary>
+        /// Terminates this instance.
+        /// </summary>
         void IExtensionApplication.Terminate()
         {
             this.Terminate();
         }
-
     }
 }

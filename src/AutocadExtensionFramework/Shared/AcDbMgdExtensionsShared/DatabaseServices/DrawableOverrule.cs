@@ -3,11 +3,27 @@ using Autodesk.AutoCAD.Runtime;
 
 namespace Autodesk.AutoCAD.DatabaseServices
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class DrawableOverrule<T> : DrawableOverrule where T : Entity
     {
+        /// <summary>
+        /// The _target class
+        /// </summary>
         private readonly RXClass _targetClass = RXObject.GetClass(typeof (T));
+        /// <summary>
+        /// The _status
+        /// </summary>
         private OverruleStatus _status = OverruleStatus.Off;
 
+        /// <summary>
+        /// Gets or sets the status.
+        /// </summary>
+        /// <value>
+        /// The status.
+        /// </value>
         public OverruleStatus Status
         {
             get { return _status; }
@@ -26,6 +42,10 @@ namespace Autodesk.AutoCAD.DatabaseServices
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DrawableOverrule{T}"/> class.
+        /// </summary>
+        /// <param name="status">The status.</param>
         protected DrawableOverrule(OverruleStatus status = OverruleStatus.On)
         {
             Status = status;

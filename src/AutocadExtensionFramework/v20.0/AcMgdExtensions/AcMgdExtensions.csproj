@@ -16,18 +16,24 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\bin\v20.0\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\..\..\..\bin\v20.0\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ACAD2015</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\bin\v20.0\Debug\AcMgdExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\bin\v20.0\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\..\..\..\bin\v20.0\Release\</OutputPath>
+    <DefineConstants>TRACE;ACAD2015</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\bin\v20.0\Release\AcMgdExtensions.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HelpDocumentation|AnyCPU'">
+    <OutputPath>..\..\..\..\bin\v20.0\Release\</OutputPath>
+    <DocumentationFile>..\..\..\..\bin\v20.0\Release\AcMgdExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AcCoreMgd">
@@ -62,6 +68,9 @@
       <Project>{5bc2cac4-8311-43f0-ada2-59905d7f56b0}</Project>
       <Name>AcDbMgdExtensions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationServices\" />
   </ItemGroup>
   <Import Project="..\..\Shared\AcMgdExtensionsShared\AcMgdExtensionsShared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

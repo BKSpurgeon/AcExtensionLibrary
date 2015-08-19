@@ -16,18 +16,24 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\bin\v20.0\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\..\..\..\bin\v20.0\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ACAD2015</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\bin\v20.0\Debug\AcCoreMgdExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\bin\v20.0\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\..\..\..\bin\v20.0\Release\</OutputPath>
+    <DefineConstants>TRACE;ACAD2015</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\bin\v20.0\Release\AcCoreMgdExtensions.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HelpDocumentation|AnyCPU'">
+    <OutputPath>..\..\..\..\bin\v20.0\Release\</OutputPath>
+    <DocumentationFile>..\..\..\..\bin\v20.0\Release\AcCoreMgdExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AcCoreMgd">

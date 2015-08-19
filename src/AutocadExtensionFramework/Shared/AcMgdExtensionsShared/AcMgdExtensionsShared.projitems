@@ -6,7 +6,7 @@
     <SharedGUID>7159f1ff-a35b-49de-b90c-48608f5ef95b</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>AcMgdExtensionsShared</Import_RootNamespace>
+    <Import_RootNamespace>Autodesk.AutoCAD</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ApplicationServices\ApplicationExtensions.cs" />

@@ -1,10 +1,18 @@
 ﻿namespace Autodesk.AutoCAD.Geometry
 {
-   public static class Point3dExtension
+    /// <summary>
+    ///
+    /// </summary>
+    public static class Point3dExtension
     {
-       public static Point2d ToPoint2D(this Point3d pnt)
-       {
-           return new Point2d(pnt.X, pnt.Y);
-       }
+        /// <summary>
+        /// To the point2 d.
+        /// </summary>
+        /// <param name="pnt">The PNT.</param>
+        /// <returns></returns>
+        public static Point2d ToPoint2D(this Point3d pnt)
+        {
+            return new Point2d(pnt.X, pnt.Y);
+        }
     }
 }
