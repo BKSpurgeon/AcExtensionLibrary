@@ -2,9 +2,18 @@
 
 namespace Autodesk.AutoCAD.DatabaseServices
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class CurveExtensions
     {
-        //Slighty modified from original author Tony Tanzillo
+        //
+        /// <summary>
+        /// Slighty modified from original author Tony Tanzillo
+        /// </summary>
+        /// <param name="curve">The curve.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">Curve was Null</exception>
         public static double GetLength(this Curve curve)
         {
             if (curve == null)
