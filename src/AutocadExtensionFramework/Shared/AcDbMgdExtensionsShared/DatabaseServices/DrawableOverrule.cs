@@ -4,7 +4,7 @@ using Autodesk.AutoCAD.Runtime;
 namespace Autodesk.AutoCAD.DatabaseServices
 {
     /// <summary>
-    /// 
+    /// Drawable
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class DrawableOverrule<T> : DrawableOverrule where T : Entity
@@ -12,7 +12,7 @@ namespace Autodesk.AutoCAD.DatabaseServices
         /// <summary>
         /// The _target class
         /// </summary>
-        private readonly RXClass _targetClass = RXObject.GetClass(typeof (T));
+        private readonly RXClass _targetClass = GetClass(typeof(T));
         /// <summary>
         /// The _status
         /// </summary>
@@ -43,7 +43,7 @@ namespace Autodesk.AutoCAD.DatabaseServices
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DrawableOverrule{T}"/> class.
+        /// Initializes a new instance of the <see cref="DrawableOverrule{T}" /> class.
         /// </summary>
         /// <param name="status">The status.</param>
         protected DrawableOverrule(OverruleStatus status = OverruleStatus.On)

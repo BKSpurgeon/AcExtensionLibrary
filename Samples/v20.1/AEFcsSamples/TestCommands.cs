@@ -7,8 +7,37 @@ using System.IO;
 
 namespace AEFcsSamples
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TestCommands : CommandClass
     {
+
+        #region StripMtext
+        /// <summary>
+        /// Removes text formatting inside Mtext
+        /// </summary>
+        [CommandMethod("StripMtext")]
+        public void StripMtext()
+        {
+            AllowedClassFilter acf = new AllowedClassFilter(typeof(MText));
+            PromptSelectionResult psr = Ed.GetSelection(acf);
+            if (psr.Status == PromptStatus.OK)
+            {
+                using (Transaction trx = Doc.TransactionManager.StartTransaction())
+                {
+                    foreach (MText mtxt in psr.Value.GetObjectIds().GetEntities<MText>(OpenMode.ForWrite))
+                    {
+                        mtxt.Contents = mtxt.Text;
+                    }
+                    trx.Commit();
+                }
+            }
+        }
+        #endregion
+
+
+        #region PrintLayers
         /// <summary>
         /// Command for printing layers
         /// </summary>
@@ -23,6 +52,11 @@ namespace AEFcsSamples
                 trx.Commit();
             }
         }
+        #endregion
+
+
+
+        #region PrintBlocks
         /// <summary>
         /// Command for printing Blocks
         /// </summary>
@@ -38,7 +72,7 @@ namespace AEFcsSamples
             }
         }
 
-
+        #endregion
 
         /// <summary>
         /// Command for printing Groups and uses a class that wraps a DBDictionary for GroupDictionary

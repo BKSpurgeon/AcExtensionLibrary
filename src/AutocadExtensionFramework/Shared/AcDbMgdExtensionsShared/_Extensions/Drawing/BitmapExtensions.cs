@@ -1,15 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Drawing.Imaging;
 using System.IO;
-using System.Drawing.Imaging;
+using System.Linq;
 using System.Windows.Media.Imaging;
 
 namespace System.Drawing
 {
+    /// <summary>
+    /// Bitmap Extensions
+    /// </summary>
     public static class BitmapExtensions
     {
+        /// <summary>
+        /// To the bitmap source.
+        /// </summary>
+        /// <param name="bitmap">The bitmap.</param>
+        /// <param name="format">The format.</param>
+        /// <param name="creationOptions">The creation options.</param>
+        /// <param name="cacheOptions">The cache options.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentNullException">bitmap</exception>
         public static BitmapSource ToBitmapSource(this Bitmap bitmap, ImageFormat format, BitmapCreateOptions creationOptions = BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption cacheOptions = BitmapCacheOption.OnLoad)
         {
             if (bitmap == null)
@@ -19,8 +28,7 @@ namespace System.Drawing
             {
                 try
                 {
-
-                    // You need to specify the image format to fill the stream. 
+                    // You need to specify the image format to fill the stream.
                     // I'm assuming it is PNG
                     bitmap.Save(memoryStream, format);
                     memoryStream.Seek(0, SeekOrigin.Begin);
@@ -44,6 +52,11 @@ namespace System.Drawing
             }
         }
 
+        /// <summary>
+        /// To the negative.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
         public static Bitmap ToNegative(this Bitmap source)
         {
             //create a blank bitmap the same size as original

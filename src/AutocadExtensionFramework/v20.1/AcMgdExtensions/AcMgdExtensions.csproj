@@ -32,7 +32,7 @@
     <DocumentationFile>..\..\..\..\bin\v20.1\Release\AcMgdExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HelpDocumentation|AnyCPU'">
-    <OutputPath>..\..\..\..\bin\v20.1\Release\</OutputPath>
+    <OutputPath>bin\HelpDocumentation\</OutputPath>
     <DocumentationFile>bin\HelpDocumentation\AcMgdExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>

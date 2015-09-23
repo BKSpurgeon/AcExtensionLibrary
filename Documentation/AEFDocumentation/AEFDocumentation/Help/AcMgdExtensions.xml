@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>AcMgdExtensions</name>
+  </assembly>
+  <members>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.ApplicationExtensions">
+      <summary></summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.DocumentExtensions">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.DocumentExtensions.CreatePreviewIcon(Autodesk.AutoCAD.DatabaseServices.BlockTableRecord)">
+      <summary>
+            Creates the preview icon.
+            </summary>
+      <param name="btr">The BTR.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.DocumentExtensions.Save(Autodesk.AutoCAD.ApplicationServices.Document)">
+      <summary>
+            Author: Tony Tanzillo
+            Source: http://www.theswamp.org/index.php?topic=42016.msg471429#msg471429
+            </summary>
+      <param name="doc">The document.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.DocumentExtensions.SendCancel(Autodesk.AutoCAD.ApplicationServices.Document)">
+      <summary>
+            Sends the cancel.
+            </summary>
+      <param name="doc">The document.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.DocumentExtensions.SendCommand(Autodesk.AutoCAD.ApplicationServices.Document,System.String)">
+      <summary>
+            Sends the command.
+            </summary>
+      <param name="doc">The document.</param>
+      <param name="command">The command.</param>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.Preferences">
+      <summary></summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.DisplayScrollBars">
+      <summary>
+            Gets the display scroll bars.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.EnterpriseMenuFile">
+      <summary>
+            Gets the enterprise menu file.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.MenuFile">
+      <summary>
+            Gets the menu file.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.PageSetupOverridesTemplateFile">
+      <summary>
+            Gets the page setup overrides template file.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.PrinterConfigPath">
+      <summary>
+            Gets the printer configuration path.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.PrinterDescPath">
+      <summary>
+            Gets the printer desc path.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.PrinterStyleSheetPath">
+      <summary>
+            Gets the printer style sheet path.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.QNewTemplateFile">
+      <summary>
+            Gets the q new template file.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.SCMTimeValue">
+      <summary>
+            Gets the SCM time value.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.SupportPaths">
+      <summary>
+            Gets the support paths.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.TemplateDWGPath">
+      <summary>
+            Gets the template DWG path.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Preferences.ToolPalettePaths">
+      <summary>
+            Gets the tool palette paths.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.StringExtensions">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.StringExtensions.Matches(System.String,System.String,System.Boolean)">
+      <summary>
+            Matcheses the specified pattern.
+            </summary>
+      <param name="str">The string.</param>
+      <param name="pattern">The pattern.</param>
+      <param name="ignoreCase">if set to <c>true</c> [ignore case].</param>
+      <returns></returns>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesDisplay.DisplayScrollBars">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesDisplay.DisplayScrollBars.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesDisplay.DisplayScrollBars" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesDisplay.DisplayScrollBars.Display">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesDisplay.DisplayScrollBars" /> is display.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory" /> class.
+            </summary>
+      <param name="path">The path.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.Equals(Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory)">
+      <summary>
+            Equalses the specified other.
+            </summary>
+      <param name="other">The other.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.Equals(System.Object)">
+      <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+      <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+      <returns>
+        <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.Exists">
+      <summary>
+            Gets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory" /> is exists.
+            </summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.GetHashCode">
+      <summary>
+            Returns a hash code for this instance.
+            </summary>
+      <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+            </returns>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.Name">
+      <summary>
+            Gets the name.
+            </summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.op_Equality(Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory,Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory)">
+      <summary>
+            Implements the operator ==.
+            </summary>
+      <param name="acadDir1">The acad dir1.</param>
+      <param name="acadDir2">The acad dir2.</param>
+      <returns>
+            The result of the operator.
+            </returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.op_Inequality(Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory,Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory)">
+      <summary>
+            Implements the operator !=.
+            </summary>
+      <param name="acadDir1">The acad dir1.</param>
+      <param name="acadDir2">The acad dir2.</param>
+      <returns>
+            The result of the operator.
+            </returns>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.AcadDirectory.Path">
+      <summary>
+            Gets the path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.EnterpriseMenuFile">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.EnterpriseMenuFile.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.EnterpriseMenuFile" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.EnterpriseMenuFile.Path">
+      <summary>
+            Gets or sets the path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.MenuFile">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.MenuFile.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.MenuFile" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.MenuFile.Path">
+      <summary>
+            Gets or sets the path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PageSetupOverridesTemplateFile">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PageSetupOverridesTemplateFile.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PageSetupOverridesTemplateFile" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PageSetupOverridesTemplateFile.Path">
+      <summary>
+            Gets or sets the path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterConfigPath">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterConfigPath.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterConfigPath" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterDescPath">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterDescPath.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterDescPath" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterStyleSheetPath">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterStyleSheetPath.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.PrinterStyleSheetPath" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.QNewTemplateFile">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.QNewTemplateFile.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.QNewTemplateFile" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.QNewTemplateFile.Path">
+      <summary>
+            Gets or sets the path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.Add(System.String)">
+      <summary>
+            Adds the specified path.
+            </summary>
+      <param name="path">The path.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.Clear">
+      <summary>
+            Clears this instance.
+            </summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.Contains(System.String)">
+      <summary>
+            Determines whether [contains] [the specified path].
+            </summary>
+      <param name="path">The path.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.GetPaths">
+      <summary>
+            Gets the paths.
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.Insert(System.Int32,System.String)">
+      <summary>
+            Inserts the specified index.
+            </summary>
+      <param name="index">The index.</param>
+      <param name="path">The path.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.Remove(System.String)">
+      <summary>
+            Removes the specified path.
+            </summary>
+      <param name="path">The path.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.RemoveAll(System.Predicate{System.String})">
+      <summary>
+            Removes all.
+            </summary>
+      <param name="match">The match.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.RemoveAt(System.Int32)">
+      <summary>
+            Removes at.
+            </summary>
+      <param name="index">The index.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.RemoveRange(System.Int32,System.Int32)">
+      <summary>
+            Removes the range.
+            </summary>
+      <param name="index">The index.</param>
+      <param name="count">The count.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.SupportPath.SaveChanges">
+      <summary>
+            Saves the changes.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.TemplateDWGPath">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.TemplateDWGPath.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.TemplateDWGPath" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.TemplateDWGPath.Path">
+      <summary>
+            Gets or sets the path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.ToolPalettePath">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.ToolPalettePath.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.ToolPalettePath" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesFiles.ToolPalettePath.DefaultPath">
+      <summary>
+            Gets the default path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.PreferencesUser.SCMTimeValue">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.PreferencesUser.SCMTimeValue.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.PreferencesUser.SCMTimeValue" /> class.
+            </summary>
+      <param name="acadPreferences">The acad preferences.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.PreferencesUser.SCMTimeValue.TimeLength">
+      <summary>
+            Gets or sets the length of the time.
+            </summary>
+    </member>
+  </members>
+</doc>

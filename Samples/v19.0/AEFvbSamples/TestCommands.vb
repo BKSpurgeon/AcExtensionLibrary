@@ -4,13 +4,18 @@ Imports Autodesk.AutoCAD.DatabaseServices
 Imports Autodesk.AutoCAD.EditorInput
 Imports Autodesk.AutoCAD.Runtime
 
-
+''' <summary>
+''' 
+''' </summary>
 Public Class TestCommands
     Inherits CommandClass
+
+
+
     ''' <summary>
     ''' Command for printing layers
     ''' </summary>
-    <CommandMethod("PrintLayers")> _
+    <CommandMethod("PrintLayers")>
     Public Sub PrintLayers()
         Using trx As Transaction = Db.TransactionManager.StartTransaction()
             Dim lt As LayerTable = Db.LayerTable()
@@ -19,10 +24,12 @@ Public Class TestCommands
             trx.Commit()
         End Using
     End Sub
+
+
     ''' <summary>
     ''' Command for printing Blocks
     ''' </summary>
-    <CommandMethod("PrintBlocks")> _
+    <CommandMethod("PrintBlocks")>
     Public Sub PrintBlocks()
         Using trx As Transaction = Db.TransactionManager.StartTransaction()
             Dim bt As BlockTable = Db.BlockTable()
@@ -37,7 +44,7 @@ Public Class TestCommands
     ''' <summary>
     ''' Command for printing Groups and uses a class that wraps a DBDictionary for GroupDictionary
     ''' </summary>
-    <CommandMethod("PrintGroups")> _
+    <CommandMethod("PrintGroups")>
     Public Sub PrintGroups()
         Using trx As Transaction = Db.TransactionManager.StartTransaction()
             Dim grpDic As GroupDictionary = Db.GroupDictionary()
@@ -52,7 +59,7 @@ Public Class TestCommands
     ''' <summary>
     ''' Just uses extension methods unlike above
     ''' </summary>
-    <CommandMethod("PrintGroups2")> _
+    <CommandMethod("PrintGroups2")>
     Public Sub PrintGroups2()
         Using trx As Transaction = Db.TransactionManager.StartTransaction()
             Dim grpDic As DBDictionary = Db.GroupDBDictionary()
@@ -68,7 +75,7 @@ Public Class TestCommands
     ''' <summary>
     ''' Print line length for each line
     ''' </summary>
-    <CommandMethod("PrintLinesLength")> _
+    <CommandMethod("PrintLinesLength")>
     Public Sub PrintLinesLength()
         Using trx As Transaction = Db.TransactionManager.StartTransaction()
             Dim model As BlockTableRecord = Db.ModelSpace()
@@ -84,7 +91,7 @@ Public Class TestCommands
     ''' <summary>
     ''' Get total length of all lines in model space
     ''' </summary>
-    <CommandMethod("PrintTotalLinesLength")> _
+    <CommandMethod("PrintTotalLinesLength")>
     Public Sub PrintTotalLinesLength()
         Using trx As Transaction = Db.TransactionManager.StartTransaction()
             Dim model As BlockTableRecord = Db.ModelSpace()
@@ -95,27 +102,21 @@ Public Class TestCommands
         End Using
     End Sub
 
+    <CommandMethod("StripMtext")>
+    Public Sub StripMtext()
 
-    '<CommandMethod("MBI")> _
-    'Public Sub MBI()
-    '    Dim pso As New PromptStringOptions(vbLf & "BlockName")
-    '    pso.AllowSpaces = True
-    '    Dim pr As PromptResult = Ed.GetString(pso)
+        Dim acf As New AllowedClassFilter(GetType(MText))
+        Dim psr As PromptSelectionResult = Ed.GetSelection(acf)
+        If psr.Status = PromptStatus.OK Then
+            Using trx As Transaction = Doc.TransactionManager.StartTransaction()
+                For Each mtxt As MText In psr.Value.GetObjectIds().GetEntities(Of MText)(OpenMode.ForWrite)
+                    mtxt.Contents = mtxt.Text
+                Next
+                trx.Commit()
+            End Using
+        End If
+    End Sub
 
-    '    If pr.Status <> PromptStatus.OK Then
-    '        Return
-    '    End If
 
-    '    Dim cmd As New ScriptCommand("_.-INSERT", pr.StringResult)
-    '    cmd.WaitForExit = True
-
-    '    Dim ps As PromptStatus = PromptStatus.OK
-
-    '    While Not HostApplicationServices.Current.UserBreak() AndAlso ps = PromptStatus.OK
-    '        ps = cmd.Run()
-    '    End While
-    'End Sub
 
 End Class
-
-
