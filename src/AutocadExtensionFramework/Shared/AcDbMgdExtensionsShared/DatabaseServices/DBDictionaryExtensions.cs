@@ -44,5 +44,8 @@ namespace Autodesk.AutoCAD.DatabaseServices
         {
             return dic.GetEntries<T>(dic.Database.TransactionManager.TopTransaction, mode, includingErased);
         }
+
+
+
     }
 }

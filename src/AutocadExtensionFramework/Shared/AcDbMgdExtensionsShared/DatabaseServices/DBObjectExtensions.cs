@@ -20,7 +20,7 @@
         /// </summary>
         /// <param name="dbObj">The database object.</param>
         /// <returns></returns>
-        public static DBDictionary GetExtensionDictionary(this DBObject dbObj)
+        public static DBDictionary GetExtensionDictionary(this DBObject dbObj, OpenMode openMode = OpenMode.ForRead)
         {
             if (!HasExtensionDictionary(dbObj))
             {
@@ -30,7 +30,7 @@
                 }
                 dbObj.CreateExtensionDictionary();
             }
-            return dbObj.ExtensionDictionary.GetDBObject<DBDictionary>();
+            return dbObj.ExtensionDictionary.GetDBObject<DBDictionary>(openMode);
         }
 
         /// <summary>

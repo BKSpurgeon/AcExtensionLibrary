@@ -12,7 +12,7 @@ namespace Autodesk.AutoCAD.ApplicationServices
         /// </summary>
         /// <param name="tm">The tm.</param>
         /// <returns></returns>
-        public static Runtime.LockedTransaction StarLockedTransaction(this TransactionManager tm)
+        public static Runtime.LockedTransaction StartLockedTransaction(this TransactionManager tm)
         {
             DocumentLock doclock = Application.DocumentManager.MdiActiveDocument.LockDocument();
             return new Runtime.LockedTransaction(tm.StartTransaction(), doclock);
@@ -27,7 +27,7 @@ namespace Autodesk.AutoCAD.ApplicationServices
         /// <param name="localCommandName">Name of the local command.</param>
         /// <param name="promptIfFails">if set to <c>true</c> [prompt if fails].</param>
         /// <returns></returns>
-        public static Runtime.LockedTransaction StarLockedTransaction(this TransactionManager tm, DocumentLockMode lockMode, string globalCommandName, string localCommandName, bool promptIfFails)
+        public static Runtime.LockedTransaction StartLockedTransaction(this TransactionManager tm, DocumentLockMode lockMode, string globalCommandName, string localCommandName, bool promptIfFails)
         {
             DocumentLock doclock = Application.DocumentManager.MdiActiveDocument.LockDocument(lockMode, globalCommandName, localCommandName, promptIfFails);
             return new Runtime.LockedTransaction(tm.StartTransaction(), doclock);
