@@ -64,15 +64,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\AutocadExtensionFramework\v20.1\AcCoreMgdExtensions\AcCoreMgdExtensions.csproj">
+    <ProjectReference Include="..\..\..\src\AcMgdExtentions\v20.1\AcCoreMgdExtensions\AcCoreMgdExtensions.csproj">
       <Project>{ba295d50-ff89-4022-b9a2-6c51c05a0e31}</Project>
       <Name>AcCoreMgdExtensions</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\src\AutocadExtensionFramework\v20.1\AcDbMgdExtensions\AcDbMgdExtensions.csproj">
+    <ProjectReference Include="..\..\..\src\AcMgdExtentions\v20.1\AcDbMgdExtensions\AcDbMgdExtensions.csproj">
       <Project>{e28d0cf1-1506-4120-8905-7826c1790daf}</Project>
       <Name>AcDbMgdExtensions</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\src\AutocadExtensionFramework\v20.1\AcMgdExtensions\AcMgdExtensions.csproj">
+    <ProjectReference Include="..\..\..\src\AcMgdExtentions\v20.1\AcMgdExtensions\AcMgdExtensions.csproj">
       <Project>{65de7ea8-3381-45b4-b7ab-0af92dfcda35}</Project>
       <Name>AcMgdExtensions</Name>
     </ProjectReference>

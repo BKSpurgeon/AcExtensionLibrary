@@ -15,10 +15,10 @@
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
     <OutputPath>Help\</OutputPath>
-    <HtmlHelpName>AEFDocumentation</HtmlHelpName>
+    <HtmlHelpName>AcMgdExtension Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <TransformComponentArguments>
-      <Argument Key="logoFile" Value="AEF64.png" />
+      <Argument Key="logoFile" Value="" />
       <Argument Key="logoHeight" Value="" />
       <Argument Key="logoWidth" Value="" />
       <Argument Key="logoAltText" Value="" />
@@ -37,7 +37,7 @@
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>Autocad Extension Framework Documentation - v20.1</HelpTitle>
+    <HelpTitle>AcMgd Extension Library- v20.1</HelpTitle>
     <ContentPlacement>BelowNamespaces</ContentPlacement>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
@@ -122,6 +122,9 @@
       <NamespaceSummaryItem name="System.Drawing" isDocumented="True" xmlns="" />
     </NamespaceSummaries>
     <MissingTags>None</MissingTags>
+    <ApiFilter>
+      <Filter entryType="Namespace" fullName="System" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="System.Drawing" isExposed="False" xmlns="" /></ApiFilter>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

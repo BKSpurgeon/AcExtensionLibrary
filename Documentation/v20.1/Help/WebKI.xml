@@ -144,13 +144,6 @@
     <HelpKINode Title="TypeCode Enumeration" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
     <HelpKINode Title="XDataTypeCode Enumeration" Url="html/de408fbd-5d24-409c-5db1-cc2ca2a0090e.htm" />
   </HelpKINode>
-  <HelpKINode Title="BitmapExtensions class">
-    <HelpKINode Title="BitmapExtensions Class" Url="html/9c657057-57f3-bae3-8296-6d87c8c71bca.htm" />
-    <HelpKINode Title="about BitmapExtensions class" Url="html/9c657057-57f3-bae3-8296-6d87c8c71bca.htm" />
-    <HelpKINode Title="methods" Url="html/2d37ba4e-aa0e-28b5-1272-65d24f7dc530.htm" />
-  </HelpKINode>
-  <HelpKINode Title="BitmapExtensions.ToBitmapSource method" Url="html/fffa7f22-dc84-28b7-2c89-e46db813015b.htm" />
-  <HelpKINode Title="BitmapExtensions.ToNegative method" Url="html/be266fdb-6cab-7cbf-ebdc-ad9c18fcf020.htm" />
   <HelpKINode Title="BLOCKEDITOR property" Url="html/c18786c1-a21e-f0bb-db8a-46cf7e4130e8.htm" />
   <HelpKINode Title="BlockName enumeration member" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
   <HelpKINode Title="BlockReferenceExtensions class">
@@ -541,10 +534,6 @@
     <HelpKINode Title="ProxyEntityExtensions.IsErasable Method " Url="html/bb2cdbfa-1308-0fd8-5880-1b34d2915a42.htm" />
     <HelpKINode Title="ProxyObjectExtensions.IsErasable Method " Url="html/17c92149-6fe7-18ae-93f6-897c1402c25b.htm" />
   </HelpKINode>
-  <HelpKINode Title="IsNull(Of T) method" Url="html/40d7cecd-2dea-dea9-2b73-aa33fdcdba85.htm" />
-  <HelpKINode Title="IsNull&lt;T&gt; method" Url="html/40d7cecd-2dea-dea9-2b73-aa33fdcdba85.htm" />
-  <HelpKINode Title="IsNullOrEmpty method" Url="html/3f54d755-d697-3851-7016-42eaba7f0b03.htm" />
-  <HelpKINode Title="IsNullOrWhiteSpace method" Url="html/056746c2-eb26-9b91-dae9-8c282f116d41.htm" />
   <HelpKINode Title="IsSet method" Url="html/e636b4b1-e983-2de6-9b96-b97e1cd10013.htm" />
   <HelpKINode Title="Item property">
     <HelpKINode Title="Settings.SystemVariables.Item Property " Url="html/038003f2-f752-97c5-934e-09ec93b75a0c.htm" />
@@ -646,14 +635,6 @@
   <HelpKINode Title="NormalX enumeration member" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
   <HelpKINode Title="NormalY enumeration member" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
   <HelpKINode Title="NormalZ enumeration member" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
-  <HelpKINode Title="ObjectExtensions class">
-    <HelpKINode Title="ObjectExtensions Class" Url="html/084c84c0-2b1e-ba14-ff91-dd142ac7e3d7.htm" />
-    <HelpKINode Title="about ObjectExtensions class" Url="html/084c84c0-2b1e-ba14-ff91-dd142ac7e3d7.htm" />
-    <HelpKINode Title="methods" Url="html/d02f9dde-ab67-5e97-a9e0-8749265f7f55.htm" />
-  </HelpKINode>
-  <HelpKINode Title="ObjectExtensions.IsNull(Of T) method" Url="html/40d7cecd-2dea-dea9-2b73-aa33fdcdba85.htm" />
-  <HelpKINode Title="ObjectExtensions.IsNull&lt;T&gt; method" Url="html/40d7cecd-2dea-dea9-2b73-aa33fdcdba85.htm" />
-  <HelpKINode Title="ObjectExtensions.ThrowIfNull method" Url="html/2789efa9-48e2-a9cd-534c-c81a63ab796c.htm" />
   <HelpKINode Title="ObjectIdCollectionExtensions class">
     <HelpKINode Title="ObjectIdCollectionExtensions Class" Url="html/b01a7293-c5a7-1355-001a-d9843ea0bfc7.htm" />
     <HelpKINode Title="about ObjectIdCollectionExtensions class" Url="html/b01a7293-c5a7-1355-001a-d9843ea0bfc7.htm" />
@@ -957,18 +938,10 @@
   <HelpKINode Title="String enumeration member" Url="html/d8112b42-9ecd-27ab-135c-1d0d963be103.htm" />
   <HelpKINode Title="StringExtensions class">
     <HelpKINode Title="StringExtensions Class" Url="html/8ae414ce-582a-0d56-de79-53a3572d2282.htm" />
-    <HelpKINode Title="StringExtensions Class" Url="html/0d00a735-d3f5-9909-72d2-7847f382adaa.htm" />
     <HelpKINode Title="about StringExtensions class" Url="html/8ae414ce-582a-0d56-de79-53a3572d2282.htm" />
-    <HelpKINode Title="about StringExtensions class" Url="html/0d00a735-d3f5-9909-72d2-7847f382adaa.htm" />
     <HelpKINode Title="methods" Url="html/013a1f34-c6d5-4493-17ea-3fbeeffb0c07.htm" />
-    <HelpKINode Title="methods" Url="html/2f643c18-743a-85dc-3093-9819495e918e.htm" />
   </HelpKINode>
-  <HelpKINode Title="StringExtensions.IsNullOrEmpty method" Url="html/3f54d755-d697-3851-7016-42eaba7f0b03.htm" />
-  <HelpKINode Title="StringExtensions.IsNullOrWhiteSpace method" Url="html/056746c2-eb26-9b91-dae9-8c282f116d41.htm" />
   <HelpKINode Title="StringExtensions.Matches method" Url="html/f5d76731-86b3-0f94-6157-b9c7914b89c8.htm" />
-  <HelpKINode Title="StringExtensions.ThrowIfNullOrEmpty method" Url="html/678dcb90-d815-1f86-a7aa-ed3e5296d2b6.htm" />
-  <HelpKINode Title="StringExtensions.ThrowIfNullOrWhiteSpace method" Url="html/c9ed82a6-f772-7ed7-d980-520c458db801.htm" />
-  <HelpKINode Title="StringExtensions.ToTitleCase method" Url="html/d7f41e5f-b2f3-c472-b6cd-ebee6db72d82.htm" />
   <HelpKINode Title="Subclass enumeration member" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
   <HelpKINode Title="SupportPath class">
     <HelpKINode Title="SupportPath Class" Url="html/eeb2698a-b901-2220-6a15-ac0e78b03ff5.htm" />
@@ -1011,11 +984,6 @@
   </HelpKINode>
   <HelpKINode Title="SymbolTableRecordFilterExtensions.IsSet method" Url="html/e636b4b1-e983-2de6-9b96-b97e1cd10013.htm" />
   <HelpKINode Title="SymbolTableRecordName enumeration member" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
-  <HelpKINode Title="System namespace" Url="html/7bae3666-6d20-26f2-6798-b8095e51d913.htm" />
-  <HelpKINode Title="System.Drawing namespace" Url="html/c8f9442b-81fc-e61e-9aa5-b3a590cd3c06.htm" />
-  <HelpKINode Title="System.Drawing.BitmapExtensions class" Url="html/9c657057-57f3-bae3-8296-6d87c8c71bca.htm" />
-  <HelpKINode Title="System.ObjectExtensions class" Url="html/084c84c0-2b1e-ba14-ff91-dd142ac7e3d7.htm" />
-  <HelpKINode Title="System.StringExtensions class" Url="html/0d00a735-d3f5-9909-72d2-7847f382adaa.htm" />
   <HelpKINode Title="SystemVariables class">
     <HelpKINode Title="methods" Url="html/4c29625d-2f52-8378-9f6f-153a37107fc5.htm" />
     <HelpKINode Title="properties" Url="html/e4fe782f-3af2-ba42-8afa-8b3197280a7a.htm" />
@@ -1062,13 +1030,8 @@
   <HelpKINode Title="TextStyleTableExtensions.GetShapeFileTableRecords method" Url="html/f6b19d21-5136-42f1-f850-122b87eaaf1a.htm" />
   <HelpKINode Title="TextStyleTableExtensions.GetTextStyleTableRecords method" Url="html/bb3540a7-3ada-d626-8244-5697a8cdec1a.htm" />
   <HelpKINode Title="Thickness enumeration member" Url="html/76459b86-0611-27d8-a26d-2f792b48b427.htm" />
-  <HelpKINode Title="ThrowIfNull method" Url="html/2789efa9-48e2-a9cd-534c-c81a63ab796c.htm" />
-  <HelpKINode Title="ThrowIfNullOrEmpty method" Url="html/678dcb90-d815-1f86-a7aa-ed3e5296d2b6.htm" />
-  <HelpKINode Title="ThrowIfNullOrWhiteSpace method" Url="html/c9ed82a6-f772-7ed7-d980-520c458db801.htm" />
   <HelpKINode Title="TimeLength property" Url="html/2a6e823b-5555-abc9-c868-5bfbd71ee571.htm" />
   <HelpKINode Title="ToArray method" Url="html/9b25f7f7-7758-e49b-2bbc-3ac42f48cf75.htm" />
-  <HelpKINode Title="ToBitmapSource method" Url="html/fffa7f22-dc84-28b7-2c89-e46db813015b.htm" />
-  <HelpKINode Title="ToNegative method" Url="html/be266fdb-6cab-7cbf-ebdc-ad9c18fcf020.htm" />
   <HelpKINode Title="ToObjectIdCollection method" Url="html/7a92f522-6fcb-fb6e-f4f1-8dc0a4e0b9a8.htm" />
   <HelpKINode Title="ToolPalettePath class">
     <HelpKINode Title="ToolPalettePath Class" Url="html/79c45de0-40e5-8303-10f7-921a69bb28d2.htm" />
@@ -1082,7 +1045,6 @@
   <HelpKINode Title="ToolPalettePaths property" Url="html/824e4c63-e570-4492-2877-a265558710cd.htm" />
   <HelpKINode Title="ToPoint2D method" Url="html/d9a723a4-c3ee-0842-6409-dff5ec9744b8.htm" />
   <HelpKINode Title="ToResultTypedValue method" Url="html/ecd486fb-1b7b-6881-33a2-fd7646f46a97.htm" />
-  <HelpKINode Title="ToTitleCase method" Url="html/d7f41e5f-b2f3-c472-b6cd-ebee6db72d82.htm" />
   <HelpKINode Title="TransactedSysytemVariables class">
     <HelpKINode Title="TransactedSysytemVariables Class" Url="html/0cb0be94-108e-f0b0-c589-4cfe567b7d93.htm" />
     <HelpKINode Title="about TransactedSysytemVariables class" Url="html/0cb0be94-108e-f0b0-c589-4cfe567b7d93.htm" />
@@ -1172,8 +1134,8 @@
   <HelpKINode Title="WorldZDir enumeration member" Url="html/de408fbd-5d24-409c-5db1-cc2ca2a0090e.htm" />
   <HelpKINode Title="WorldZDisp enumeration member" Url="html/de408fbd-5d24-409c-5db1-cc2ca2a0090e.htm" />
   <HelpKINode Title="WrapperDBDictionary(Of T) class">
-    <HelpKINode Title="WrapperDBDictionary(T) Class" Url="html/115e7d35-d6e7-d229-0598-eee015b5fc82.htm" />
     <HelpKINode Title="WrapperDBDictionary(T) Class" Url="html/9d277ebf-4773-2b19-3a88-428a93df4c89.htm" />
+    <HelpKINode Title="WrapperDBDictionary(T) Class" Url="html/115e7d35-d6e7-d229-0598-eee015b5fc82.htm" />
     <HelpKINode Title="about WrapperDBDictionary(Of T) class" Url="html/115e7d35-d6e7-d229-0598-eee015b5fc82.htm" />
     <HelpKINode Title="about WrapperDBDictionary(Of T) class" Url="html/9d277ebf-4773-2b19-3a88-428a93df4c89.htm" />
     <HelpKINode Title="methods" Url="html/acccb842-7862-955a-a0d0-e5670c3744d5.htm" />
@@ -1192,16 +1154,16 @@
   <HelpKINode Title="WrapperDBDictionary&lt;T&gt; class">
     <HelpKINode Title="WrapperDBDictionary(T) Class" Url="html/9d277ebf-4773-2b19-3a88-428a93df4c89.htm" />
     <HelpKINode Title="WrapperDBDictionary(T) Class" Url="html/115e7d35-d6e7-d229-0598-eee015b5fc82.htm" />
-    <HelpKINode Title="about WrapperDBDictionary&lt;T&gt; class" Url="html/115e7d35-d6e7-d229-0598-eee015b5fc82.htm" />
     <HelpKINode Title="about WrapperDBDictionary&lt;T&gt; class" Url="html/9d277ebf-4773-2b19-3a88-428a93df4c89.htm" />
-    <HelpKINode Title="methods" Url="html/acccb842-7862-955a-a0d0-e5670c3744d5.htm" />
+    <HelpKINode Title="about WrapperDBDictionary&lt;T&gt; class" Url="html/115e7d35-d6e7-d229-0598-eee015b5fc82.htm" />
     <HelpKINode Title="methods" Url="html/6492af87-e12e-3470-958c-e69a097eb578.htm" />
+    <HelpKINode Title="methods" Url="html/acccb842-7862-955a-a0d0-e5670c3744d5.htm" />
     <HelpKINode Title="properties" Url="html/575cc2e7-f720-7150-db97-b37c601e5e8e.htm" />
     <HelpKINode Title="properties" Url="html/0f8037e2-da29-57b7-bd56-65997fe97687.htm" />
   </HelpKINode>
   <HelpKINode Title="WrapperDBDictionary&lt;T&gt;.GetEnumerator method">
-    <HelpKINode Title="WrapperDBDictionary(T).GetEnumerator Method " Url="html/7ddf59fa-ee35-3359-67c4-990dd8ac00d9.htm" />
     <HelpKINode Title="WrapperDBDictionary(T).GetEnumerator Method " Url="html/4e70bfcf-8417-2f7b-6f08-607ec85468d7.htm" />
+    <HelpKINode Title="WrapperDBDictionary(T).GetEnumerator Method " Url="html/7ddf59fa-ee35-3359-67c4-990dd8ac00d9.htm" />
   </HelpKINode>
   <HelpKINode Title="WrapperDBDictionary&lt;T&gt;.IncludingErased property">
     <HelpKINode Title="WrapperDBDictionary(T).IncludingErased Property " Url="html/84dbb2b6-db6e-356e-3145-8e1325f2a4a4.htm" />
