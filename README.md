@@ -1,1 +1,1 @@
-# AutocadExtensionFramework
+# AcMgdExtentions
