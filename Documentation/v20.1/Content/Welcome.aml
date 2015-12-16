@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="71cd4e46-2ada-4bd9-941a-d039f17c881f" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Autocad Extension Framework initial documentation.</para>
+		</introduction>
+
+		<section>
+			<title>Goal and intent</title>
+			<content>
+				<para>Below is a list of goals and intent of framework</para>
+
+				<list class="bullet">
+					<listItem>
+						<para>Reduce time writing code</para>
+					</listItem>
+
+					<listItem>
+						<para>Reduce errors</para>
+					</listItem>
+
+					<listItem>
+						<para>Lower barrier entry to working with objects through API</para>
+					</listItem>
+
+				</list>
+
+				<para>Go Fuck yourself</para>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="405743a2-11e5-40b6-93b4-bdb3b576ba44" />
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

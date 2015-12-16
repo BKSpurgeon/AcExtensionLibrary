@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="e6e35fea-88e8-4523-a249-e4fae9e8ecb3" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+
+        <introduction>
+          <!-- Uncomment this to generate an outline of the section and sub-section
+           titles.  Specify a numeric value as the inner text to limit it to
+           a specific number of sub-topics when creating the outline.  Specify
+           zero (0) to limit it to top-level sections only.  -->
+          <!-- <autoOutline /> -->
+
+          <para>Transaction Manager</para>
+        </introduction>
+
+        <!-- Add one or more top-level section elements.  These are collapsible.
+         If using <autoOutline />, add an address attribute to identify it
+         and specify a title so that it can be jumped to with a hyperlink. -->
+        <section address="AcDbTransactionManager">
+          <title>AcDbTransactionManager</title>
+          <content>
+            <!-- Uncomment this to create a sub-section outline
+        <autoOutline /> -->
+
+            <code language="cs">
+<![CDATA[namespace Autodesk.AutoCAD.DatabaseServices
+{
+    using Autodesk.AutoCAD.Runtime;
+    using System;
+    using System.Runtime.InteropServices;
+
+    [Wrapper("AcDbTransactionManager")]
+    public class TransactionManager : RXObject
+    {
+        protected internal TransactionManager(IntPtr unmanagedPointer, [MarshalAs(UnmanagedType.U1)] bool autoDelete) : base(unmanagedPointer, autoDelete)
+        {
+        }
+
+        public virtual unsafe void AddNewlyCreatedDBObject(DBObject obj, [MarshalAs(UnmanagedType.U1)] bool add)
+        {
+            AcDbTransactionManager* impObj = this.GetImpObj();
+            int num = (int) **(((long*) impObj))[0x60L](impObj, obj.GetImpObj(), add);
+            if (num != 0)
+            {
+                throw new Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+            obj.AutoDelete = false;
+        }
+
+        public virtual unsafe DBObjectCollection GetAllObjects()
+        {
+            DBObjectCollection objects = new DBObjectCollection();
+            AcDbTransactionManager* impObj = this.GetImpObj();
+            int num = (int) **(((long*) impObj))[0x68L](impObj, objects.GetImpObj());
+            if (num != 0)
+            {
+                throw new Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+            return objects;
+        }
+
+        internal unsafe AcDbTransactionManager* GetImpObj()
+        {
+            return (AcDbTransactionManager*) base.GetImpObj();
+        }
+
+        public virtual DBObject GetObject(ObjectId id, Autodesk.AutoCAD.DatabaseServices.OpenMode mode)
+        {
+            return GetObjectInternal(this.GetImpObj(), id, mode, false, false);
+        }
+
+        public virtual DBObject GetObject(ObjectId id, Autodesk.AutoCAD.DatabaseServices.OpenMode mode, [MarshalAs(UnmanagedType.U1)] bool openErased)
+        {
+            return GetObjectInternal(this.GetImpObj(), id, mode, openErased, false);
+        }
+
+        public virtual DBObject GetObject(ObjectId id, Autodesk.AutoCAD.DatabaseServices.OpenMode mode, [MarshalAs(UnmanagedType.U1)] bool openErased, [MarshalAs(UnmanagedType.U1)] bool forceOpenOnLockedLayer)
+        {
+            return GetObjectInternal(this.GetImpObj(), id, mode, openErased, forceOpenOnLockedLayer);
+        }
+
+        internal static unsafe DBObject GetObjectInternal(AcDbTransactionManager* pTM, ObjectId id, Autodesk.AutoCAD.DatabaseServices.OpenMode mode, [MarshalAs(UnmanagedType.U1)] bool openErased, [MarshalAs(UnmanagedType.U1)] bool forceOpenOnLockedLayer)
+        {
+            AcDbObject* objPtr;
+            int num = GetObjectInTransaction(&objPtr, pTM, (AcDbObjectId) ((long) &id), (AcDb.OpenMode) mode, openErased, forceOpenOnLockedLayer);
+            if (num != 0)
+            {
+                throw new Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+            IntPtr unmanagedPointer = new IntPtr((void*) objPtr);
+            return (DBObject) RXObject.Create(unmanagedPointer, false);
+        }
+
+        public virtual unsafe void QueueForGraphicsFlush()
+        {
+            AcDbTransactionManager* impObj = this.GetImpObj();
+            int num = (int) **(((long*) impObj))[0x90L](impObj);
+            if (num != 0)
+            {
+                throw new Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+        }
+
+        public virtual OpenCloseTransaction StartOpenCloseTransaction()
+        {
+            return new OpenCloseTransaction();
+        }
+
+        public virtual unsafe Transaction StartTransaction()
+        {
+            AcDbTransactionManager* impObj = this.GetImpObj();
+            AcTransaction* transactionPtr = (AcTransaction*) **(((long*) impObj))[0x38L](impObj);
+            IntPtr returnValue = new IntPtr((void*) transactionPtr);
+            Interop.CheckNull(returnValue);
+            return new Transaction(new IntPtr((void*) transactionPtr), true);
+        }
+
+        public virtual int NumberOfActiveTransactions
+        {
+            get
+            {
+                AcDbTransactionManager* impObj = this.GetImpObj();
+                return (int) **(((long*) impObj))[80L](impObj);
+            }
+        }
+
+        public virtual Transaction TopTransaction
+        {
+            get
+            {
+                AcDbTransactionManager* impObj = this.GetImpObj();
+                AcTransaction* transactionPtr = (AcTransaction*) **(((long*) impObj))[0x58L](impObj);
+                if (transactionPtr != null)
+                {
+                    return new Transaction(new IntPtr((void*) transactionPtr), false);
+                }
+                return null;
+            }
+        }
+    }
+}]]>
+
+
+            </code>
+          </content>
+        </section>
+
+        <section address="AcTransactionManager">
+          <title>AcTransactionManager</title>
+          <content>
+            <!-- Uncomment this to create a sub-section outline
+        <autoOutline /> -->
+
+            <code language="cs">
+<![CDATA[namespace Autodesk.AutoCAD.ApplicationServices
+{
+    using Autodesk.AutoCAD.DatabaseServices;
+    using Autodesk.AutoCAD.Runtime;
+    using System;
+    using System.Runtime.InteropServices;
+
+    [Wrapper("AcTransactionManager")]
+    public sealed class TransactionManager : Autodesk.AutoCAD.DatabaseServices.TransactionManager
+    {
+        internal TransactionManager(IntPtr unmanagedObject, [MarshalAs(UnmanagedType.U1)] bool bAutoDelete) : base(unmanagedObject, bAutoDelete)
+        {
+        }
+
+        protected sealed override void DeleteUnmanagedObject()
+        {
+        }
+
+        public unsafe void EnableGraphicsFlush([MarshalAs(UnmanagedType.U1)] bool doEnable)
+        {
+            AcTransactionManager* impObj = this.GetImpObj();
+            Interop.Check((int) **(((long*) impObj))[0x98L](impObj, doEnable));
+        }
+
+        public unsafe void FlushGraphics()
+        {
+            AcTransactionManager* impObj = this.GetImpObj();
+            **(((long*) impObj))[160L](impObj);
+        }
+
+        internal unsafe AcTransactionManager* GetImpObj()
+        {
+            return (AcTransactionManager*) base.UnmanagedObject.ToPointer();
+        }
+
+        public sealed override unsafe Transaction StartTransaction()
+        {
+            AcTransactionManager* impObj = this.GetImpObj();
+            AcTransaction* transactionPtr = (AcTransaction*) **(((long*) impObj))[0x38L](impObj);
+            IntPtr returnValue = new IntPtr((void*) transactionPtr);
+            Interop.CheckNull(returnValue);
+            return new AppTransaction(new IntPtr((void*) transactionPtr), true, this);
+        }
+
+        public override Transaction TopTransaction
+        {
+            get
+            {
+                AcTransactionManager* impObj = this.GetImpObj();
+                AcTransaction* transactionPtr = (AcTransaction*) **(((long*) impObj))[0x58L](impObj);
+                if (transactionPtr != null)
+                {
+                    return new AppTransaction(new IntPtr((void*) transactionPtr), false, this);
+                }
+                return null;
+            }
+        }
+    }
+}]]>
+
+
+
+            </code>
+          </content>
+          <!-- If a section contains a sections element, its content creates
+           sub-sections.  These are not collapsible.
+      <sections>
+          <section address="SubSection1">
+              <title>Sub-section 1</title>
+              <content>
+                  <para>Sub-section content.</para>
+              </content>
+          </section>
+          <section address="SubSection2">
+              <title>Sub-section 2</title>
+              <content>
+                  <para>Sub-section content.</para>
+              </content>
+          </section>
+      </sections> -->
+        </section>
+
+        <relatedTopics>
+          <!-- One or more of the following:
+           - A local link
+           - An external link
+           - A code entity reference
+
+      <link xlink:href="Other Topic's ID" />
+      <link xlink:href="Other Topic's ID">Link inner text</link>
+
+      <externalLink>
+          <linkText>Link text</linkText>
+          <linkAlternateText>Optional alternate link text</linkAlternateText>
+          <linkUri>URI</linkUri>
+      </externalLink>
+
+      <codeEntityReference>API member ID</codeEntityReference>
+
+      Examples:
+
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8270" />
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
+
+      <externalLink>
+          <linkText>SHFB on GitHub</linkText>
+          <linkAlternateText>Go to GitHub</linkAlternateText>
+          <linkUri>https://GitHub.com/EWSoftware/SHFB</linkUri>
+      </externalLink>
+
+      <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
+      <codeEntityReference>P:TestDoc.TestClass.SomeProperty</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor(System.String,System.Int32)</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.ToString</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.FirstMethod</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.SecondMethod(System.Int32,System.String)</codeEntityReference>
+      -->
+        </relatedTopics>
+  </developerConceptualDocument>
+</topic>

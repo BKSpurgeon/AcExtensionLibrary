@@ -9,7 +9,7 @@
         /// Determines whether [has extension dictionary].
         /// </summary>
         /// <param name="dbObj">The database object.</param>
-        /// <returns></returns>
+        /// <returns>true if has a extension dictionary</returns>
         public static bool HasExtensionDictionary(this DBObject dbObj)
         {
             return !dbObj.ExtensionDictionary.IsNull;
@@ -19,7 +19,11 @@
         /// Gets the extension dictionary.
         /// </summary>
         /// <param name="dbObj">The database object.</param>
-        /// <returns></returns>
+        /// <param name="openMode">The open mode.</param>
+        /// <returns>
+        /// The existing extension dictionary or creates and add one if needed.
+        /// use <see cref="HasExtensionDictionary" /> if only checking to see if it exist is needed
+        /// </returns>
         public static DBDictionary GetExtensionDictionary(this DBObject dbObj, OpenMode openMode = OpenMode.ForRead)
         {
             if (!HasExtensionDictionary(dbObj))
@@ -34,7 +38,7 @@
         }
 
         /// <summary>
-        /// Tries the get extension dictionary identifier.
+        /// Tries the get extension dictionary ObjectId.
         /// </summary>
         /// <param name="dbObj">The database object.</param>
         /// <param name="id">The identifier.</param>

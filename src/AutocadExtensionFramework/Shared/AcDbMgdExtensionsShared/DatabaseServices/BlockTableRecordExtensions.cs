@@ -7,11 +7,12 @@ using Exception = Autodesk.AutoCAD.Runtime.Exception;
 namespace Autodesk.AutoCAD.DatabaseServices
 {
     /// <summary>
-    /// Extension Method class for BlockTableRecord
+    /// Extension Methods for BlockTableRecord class
     /// </summary>
     public static class BlockTableRecordExtensions
     {
         /// <summary>
+        /// 
         /// Author: Tony Tanzillo
         /// Source: http://www.theswamp.org/index.php?topic=41311.msg464529#msg464529
         /// </summary>

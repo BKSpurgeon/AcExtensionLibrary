@@ -2,26 +2,50 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Exception = Autodesk.AutoCAD.Runtime.Exception;
 
 namespace Autodesk.AutoCAD.DatabaseServices
 {
     /// <summary>
-    ///
+    /// Extension Methods for SymbolTable class
     /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
     public static class SymbolTableExtensions
     {
         /// <summary>
-        /// Gets the object ids.
+        /// Gets the object ids of the SymbolTable.
         /// </summary>
-        /// <param name="st">The st.</param>
-        /// <returns></returns>
+
+        /// <returns>IEnumerable{ObjectId}  the ObjectIds in SymbolTable</returns>
         public static IEnumerable<ObjectId> GetObjectIds(this SymbolTable st)
         {
             foreach (ObjectId id in st)
             {
                 yield return id;
             }
+            //return st.Cast<ObjectId>();
+        }
+
+
+        /// <summary>
+        /// Gets the erased object ids.
+        /// </summary>
+        /// <returns>IEnumerable{ObjectId}  the ObjectIds with IsErased = <c>true</c> in SymbolTable</returns>
+        public static IEnumerable<ObjectId> GetErasedObjectIds(this SymbolTable st)
+        {
+
+            foreach (ObjectId id in st.IncludingErased)
+            {
+                if (id.IsErased)
+                {
+                    yield return id;
+                }
+            }
+
+            //return st.IncludingErased.Cast<ObjectId>().Where(id => id.IsErased);
         }
 
         /// <summary>
@@ -79,185 +103,189 @@ namespace Autodesk.AutoCAD.DatabaseServices
             }
         }
 
-        /// <summary>
-        /// Imports the symbol table record.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="targetDb">The target database.</param>
-        /// <param name="sourceFile">The source file.</param>
-        /// <param name="cloningStyle">The cloning style.</param>
-        /// <param name="recordName">Name of the record.</param>
-        /// <returns></returns>
-        /// <exception cref="System.ArgumentException">Requires a concrete type derived from SymbolTable</exception>
-        public static ObjectId ImportSymbolTableRecord<T>(this Database targetDb, string sourceFile,
-            DuplicateRecordCloning cloningStyle, string recordName)
-            where T : SymbolTable
-        {
-            using (var sourceDb = new Database(false, true))
-            {
-                sourceDb.ReadDwgFile(sourceFile, FileShare.ReadWrite, false, "");
-                ObjectId sourceTableId, targetTableId;
-                switch (typeof(T).Name)
-                {
-                    case "BlockTable":
-                        sourceTableId = sourceDb.BlockTableId;
-                        targetTableId = targetDb.BlockTableId;
-                        break;
+       // Author: Gile
+       // Source: http://www.theswamp.org/index.php?topic=42539.msg477455#msg477455
 
-                    case "DimStyleTable":
-                        sourceTableId = sourceDb.DimStyleTableId;
-                        targetTableId = targetDb.DimStyleTableId;
-                        break;
 
-                    case "LayerTable":
-                        sourceTableId = sourceDb.LayerTableId;
-                        targetTableId = targetDb.LayerTableId;
-                        break;
+        ///// <summary>
+        ///// Imports the symbol table record.
+        ///// </summary>
+        ///// <typeparam name="T"></typeparam>
+        ///// <param name="targetDb">The target database.</param>
+        ///// <param name="sourceFile">The source file.</param>
+        ///// <param name="cloningStyle">The cloning style.</param>
+        ///// <param name="recordName">Name of the record.</param>
+        ///// <returns></returns>
+        ///// <exception cref="System.ArgumentException">Requires a concrete type derived from SymbolTable</exception>
+        //public static ObjectId ImportSymbolTableRecord<T>(this Database targetDb, string sourceFile,
+        //    DuplicateRecordCloning cloningStyle, string recordName)
+        //    where T : SymbolTable
+        //{
+        //    using (var sourceDb = new Database(false, true))
+        //    {
+        //        sourceDb.ReadDwgFile(sourceFile, FileShare.ReadWrite, false, "");
+        //        ObjectId sourceTableId, targetTableId;
+        //        switch (typeof(T).Name)
+        //        {
+        //            case "BlockTable":
+        //                sourceTableId = sourceDb.BlockTableId;
+        //                targetTableId = targetDb.BlockTableId;
+        //                break;
 
-                    case "LinetypeTable":
-                        sourceTableId = sourceDb.LinetypeTableId;
-                        targetTableId = targetDb.LinetypeTableId;
-                        break;
+        //            case "DimStyleTable":
+        //                sourceTableId = sourceDb.DimStyleTableId;
+        //                targetTableId = targetDb.DimStyleTableId;
+        //                break;
 
-                    case "RegAppTable":
-                        sourceTableId = sourceDb.RegAppTableId;
-                        targetTableId = targetDb.RegAppTableId;
-                        break;
+        //            case "LayerTable":
+        //                sourceTableId = sourceDb.LayerTableId;
+        //                targetTableId = targetDb.LayerTableId;
+        //                break;
 
-                    case "TextStyleTable":
-                        sourceTableId = sourceDb.TextStyleTableId;
-                        targetTableId = targetDb.TextStyleTableId;
-                        break;
+        //            case "LinetypeTable":
+        //                sourceTableId = sourceDb.LinetypeTableId;
+        //                targetTableId = targetDb.LinetypeTableId;
+        //                break;
 
-                    case "UcsTable":
-                        sourceTableId = sourceDb.UcsTableId;
-                        targetTableId = targetDb.UcsTableId;
-                        break;
+        //            case "RegAppTable":
+        //                sourceTableId = sourceDb.RegAppTableId;
+        //                targetTableId = targetDb.RegAppTableId;
+        //                break;
 
-                    case "ViewTable":
-                        sourceTableId = sourceDb.ViewportTableId;
-                        targetTableId = targetDb.ViewportTableId;
-                        break;
+        //            case "TextStyleTable":
+        //                sourceTableId = sourceDb.TextStyleTableId;
+        //                targetTableId = targetDb.TextStyleTableId;
+        //                break;
 
-                    case "ViewportTable":
-                        sourceTableId = sourceDb.ViewportTableId;
-                        targetTableId = targetDb.ViewportTableId;
-                        break;
+        //            case "UcsTable":
+        //                sourceTableId = sourceDb.UcsTableId;
+        //                targetTableId = targetDb.UcsTableId;
+        //                break;
 
-                    default:
-                        throw new ArgumentException("Requires a concrete type derived from SymbolTable");
-                }
+        //            case "ViewTable":
+        //                sourceTableId = sourceDb.ViewportTableId;
+        //                targetTableId = targetDb.ViewportTableId;
+        //                break;
 
-                using (Transaction tr = sourceDb.TransactionManager.StartTransaction())
-                {
-                    T sourceTable = (T)tr.GetObject(sourceTableId, OpenMode.ForRead);
-                    if (!sourceTable.Has(recordName))
-                    {
-                        return ObjectId.Null;
-                    }
-                    var idCol = new ObjectIdCollection();
-                    ObjectId sourceTableRecordId = sourceTable[recordName];
-                    idCol.Add(sourceTableRecordId);
-                    var idMap = new IdMapping();
-                    sourceDb.WblockCloneObjects(idCol, targetTableId, idMap, cloningStyle, false);
-                    tr.Commit();
-                    return idMap[sourceTableRecordId].Value;
-                }
-            }
-        }
+        //            case "ViewportTable":
+        //                sourceTableId = sourceDb.ViewportTableId;
+        //                targetTableId = targetDb.ViewportTableId;
+        //                break;
 
-        /// <summary>
-        /// Imports the symbol table records.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="targetDb">The target database.</param>
-        /// <param name="sourceFile">The source file.</param>
-        /// <param name="cloningStyle">The cloning style.</param>
-        /// <param name="recordNames">The record names.</param>
-        /// <returns></returns>
-        /// <exception cref="System.ArgumentException">Requires a concrete type derived from SymbolTable</exception>
-        public static bool ImportSymbolTableRecords<T>(this Database targetDb, string sourceFile,
-            DuplicateRecordCloning cloningStyle, params string[] recordNames)
-            where T : SymbolTable
-        {
-            using (var sourceDb = new Database(false, true))
-            {
-                sourceDb.ReadDwgFile(sourceFile, FileShare.Read, false, "");
-                ObjectId sourceTableId, targetTableId;
-                switch (typeof(T).Name)
-                {
-                    case "BlockTable":
-                        sourceTableId = sourceDb.BlockTableId;
-                        targetTableId = targetDb.BlockTableId;
-                        break;
+        //            default:
+        //                throw new ArgumentException("Requires a concrete type derived from SymbolTable");
+        //        }
 
-                    case "DimStyleTable":
-                        sourceTableId = sourceDb.DimStyleTableId;
-                        targetTableId = targetDb.DimStyleTableId;
-                        break;
+        //        using (Transaction tr = sourceDb.TransactionManager.StartTransaction())
+        //        {
+        //            T sourceTable = (T)tr.GetObject(sourceTableId, OpenMode.ForRead);
+        //            if (!sourceTable.Has(recordName))
+        //            {
+        //                return ObjectId.Null;
+        //            }
+        //            var idCol = new ObjectIdCollection();
+        //            ObjectId sourceTableRecordId = sourceTable[recordName];
+        //            idCol.Add(sourceTableRecordId);
+        //            var idMap = new IdMapping();
+        //            sourceDb.WblockCloneObjects(idCol, targetTableId, idMap, cloningStyle, false);
+        //            tr.Commit();
+        //            return idMap[sourceTableRecordId].Value;
+        //        }
+        //    }
+        //}
 
-                    case "LayerTable":
-                        sourceTableId = sourceDb.LayerTableId;
-                        targetTableId = targetDb.LayerTableId;
-                        break;
+        ///// <summary>
+        ///// Imports the symbol table records.
+        ///// </summary>
+        ///// <typeparam name="T"></typeparam>
+        ///// <param name="targetDb">The target database.</param>
+        ///// <param name="sourceFile">The source file.</param>
+        ///// <param name="cloningStyle">The cloning style.</param>
+        ///// <param name="recordNames">The record names.</param>
+        ///// <returns></returns>
+        ///// <exception cref="System.ArgumentException">Requires a concrete type derived from SymbolTable</exception>
+        //public static bool ImportSymbolTableRecords<T>(this Database targetDb, string sourceFile,
+        //    DuplicateRecordCloning cloningStyle, params string[] recordNames)
+        //    where T : SymbolTable
+        //{
+        //    using (var sourceDb = new Database(false, true))
+        //    {
+        //        sourceDb.ReadDwgFile(sourceFile, FileShare.Read, false, "");
+        //        ObjectId sourceTableId, targetTableId;
+        //        switch (typeof(T).Name)
+        //        {
+        //            case "BlockTable":
+        //                sourceTableId = sourceDb.BlockTableId;
+        //                targetTableId = targetDb.BlockTableId;
+        //                break;
 
-                    case "LinetypeTable":
-                        sourceTableId = sourceDb.LinetypeTableId;
-                        targetTableId = targetDb.LinetypeTableId;
-                        break;
+        //            case "DimStyleTable":
+        //                sourceTableId = sourceDb.DimStyleTableId;
+        //                targetTableId = targetDb.DimStyleTableId;
+        //                break;
 
-                    case "RegAppTable":
-                        sourceTableId = sourceDb.RegAppTableId;
-                        targetTableId = targetDb.RegAppTableId;
-                        break;
+        //            case "LayerTable":
+        //                sourceTableId = sourceDb.LayerTableId;
+        //                targetTableId = targetDb.LayerTableId;
+        //                break;
 
-                    case "TextStyleTable":
-                        sourceTableId = sourceDb.TextStyleTableId;
-                        targetTableId = targetDb.TextStyleTableId;
-                        break;
+        //            case "LinetypeTable":
+        //                sourceTableId = sourceDb.LinetypeTableId;
+        //                targetTableId = targetDb.LinetypeTableId;
+        //                break;
 
-                    case "UcsTable":
-                        sourceTableId = sourceDb.UcsTableId;
-                        targetTableId = targetDb.UcsTableId;
-                        break;
+        //            case "RegAppTable":
+        //                sourceTableId = sourceDb.RegAppTableId;
+        //                targetTableId = targetDb.RegAppTableId;
+        //                break;
 
-                    case "ViewTable":
-                        sourceTableId = sourceDb.ViewportTableId;
-                        targetTableId = targetDb.ViewportTableId;
-                        break;
+        //            case "TextStyleTable":
+        //                sourceTableId = sourceDb.TextStyleTableId;
+        //                targetTableId = targetDb.TextStyleTableId;
+        //                break;
 
-                    case "ViewportTable":
-                        sourceTableId = sourceDb.ViewportTableId;
-                        targetTableId = targetDb.ViewportTableId;
-                        break;
+        //            case "UcsTable":
+        //                sourceTableId = sourceDb.UcsTableId;
+        //                targetTableId = targetDb.UcsTableId;
+        //                break;
 
-                    default:
-                        throw new ArgumentException("Requires a concrete type derived from SymbolTable");
-                }
+        //            case "ViewTable":
+        //                sourceTableId = sourceDb.ViewportTableId;
+        //                targetTableId = targetDb.ViewportTableId;
+        //                break;
 
-                using (var tr = sourceDb.TransactionManager.StartTransaction())
-                {
-                    var allImported = true;
-                    var sourceTable = (T)tr.GetObject(sourceTableId, OpenMode.ForRead);
-                    var idCol = new ObjectIdCollection();
-                    foreach (var recordName in recordNames)
-                    {
-                        if (sourceTable.Has(recordName))
-                        {
-                            idCol.Add(sourceTable[recordName]);
-                        }
-                        else
-                        {
-                            allImported = false;
-                        }
-                    }
+        //            case "ViewportTable":
+        //                sourceTableId = sourceDb.ViewportTableId;
+        //                targetTableId = targetDb.ViewportTableId;
+        //                break;
 
-                    var idMap = new IdMapping();
-                    sourceDb.WblockCloneObjects(idCol, targetTableId, idMap, cloningStyle, false);
-                    tr.Commit();
-                    return allImported;
-                }
-            }
-        }
+        //            default:
+        //                throw new ArgumentException("Requires a concrete type derived from SymbolTable");
+        //        }
+
+        //        using (var tr = sourceDb.TransactionManager.StartTransaction())
+        //        {
+        //            var allImported = true;
+        //            var sourceTable = (T)tr.GetObject(sourceTableId, OpenMode.ForRead);
+        //            var idCol = new ObjectIdCollection();
+        //            foreach (var recordName in recordNames)
+        //            {
+        //                if (sourceTable.Has(recordName))
+        //                {
+        //                    idCol.Add(sourceTable[recordName]);
+        //                }
+        //                else
+        //                {
+        //                    allImported = false;
+        //                }
+        //            }
+
+        //            var idMap = new IdMapping();
+        //            sourceDb.WblockCloneObjects(idCol, targetTableId, idMap, cloningStyle, false);
+        //            tr.Commit();
+        //            return allImported;
+        //        }
+        //    }
+        //}
     }
 }

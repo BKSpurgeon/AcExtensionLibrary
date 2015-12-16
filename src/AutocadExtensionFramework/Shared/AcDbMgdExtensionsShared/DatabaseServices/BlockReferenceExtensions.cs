@@ -14,7 +14,7 @@ namespace Autodesk.AutoCAD.DatabaseServices
         /// </summary>
         /// <param name="blockref">The blockref.</param>
         /// <param name="trx">The TRX.</param>
-        /// <returns></returns>
+        /// <returns>The BlockTableRecord used to create </returns>
         public static BlockTableRecord GetEffectiveBlockTableRecord(this BlockReference blockref, Transaction trx)
         {
             if (blockref.IsDynamicBlock)

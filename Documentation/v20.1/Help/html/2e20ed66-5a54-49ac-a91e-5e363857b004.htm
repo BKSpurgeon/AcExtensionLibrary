@@ -1,0 +1,137 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AcTransaction</title><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Id" content="2e20ed66-5a54-49ac-a91e-5e363857b004" /><meta name="Description" content="Required introduction" /><meta name="Microsoft.Help.ContentType" content="Concepts" /><meta name="BrandingAware" content="true" /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Autocad Extension Framework Documentation - v20.1<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="71cd4e46-2ada-4bd9-941a-d039f17c881f.htm" title="Autocad Extension Framework Documentation - v20.1" tocid="roottoc">Autocad Extension Framework Documentation - v20.1</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="f880c187-f684-4f54-a4c1-ca653b86874e.htm" title="AEF Developers Guide" tocid="f880c187-f684-4f54-a4c1-ca653b86874e">AEF Developers Guide</a></div><div class="toclevel1" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="6fb6f345-ab8c-49a9-84fb-e855656c8624.htm" title="Transaction" tocid="6fb6f345-ab8c-49a9-84fb-e855656c8624">Transaction</a></div><div class="toclevel2 current" data-toclevel="2"><a data-tochassubtree="false" href="2e20ed66-5a54-49ac-a91e-5e363857b004.htm" title="AcTransaction" tocid="2e20ed66-5a54-49ac-a91e-5e363857b004">AcTransaction</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="e6e35fea-88e8-4523-a249-e4fae9e8ecb3.htm" title="AcTransactionManager" tocid="e6e35fea-88e8-4523-a249-e4fae9e8ecb3">AcTransactionManager</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="titleColumn">AcTransaction</td><td class="logoColumn"><img src="../icons/AEF64.png" /></td></tr></table><span class="introStyle"></span><div class="introduction"><p>Required introduction</p></div><div class="collapsibleAreaRegion" id="Section1"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />AcTransaction</span></div><div id="ID1RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0EAAACAAA_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EAAACAAA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAAACAAA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAAACAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">          <span class="highlight-keyword">namespace</span> Autodesk.AutoCAD.DatabaseServices
+{
+    <span class="highlight-keyword">using</span> Autodesk.AutoCAD.Runtime;
+    <span class="highlight-keyword">using</span> System;
+    <span class="highlight-keyword">using</span> System.Runtime.CompilerServices;
+    <span class="highlight-keyword">using</span> System.Runtime.InteropServices;
+
+    [Wrapper(<span class="highlight-literal">"AcTransaction"</span>)]
+    <span class="highlight-keyword">public</span> <span class="highlight-keyword">class</span> Transaction : RXObject
+    {
+        <span class="highlight-keyword">protected</span> <span class="highlight-keyword">internal</span> Transaction(IntPtr unmanagedPointer, [MarshalAs(UnmanagedType.U1)] <span class="highlight-keyword">bool</span> autoDelete) : <span class="highlight-keyword">base</span>(unmanagedPointer, autoDelete)
+        {
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">virtual</span> <span class="highlight-keyword">unsafe</span> <span class="highlight-keyword">void</span> Abort()
+        {
+            <span class="highlight-keyword">this</span>.CheckTopTransaction();
+            AcDbTransactionManager* modopt(CallConvCdecl) local1 = AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj());
+            <span class="highlight-keyword">int</span> num = (<span class="highlight-keyword">int</span>) *local1[<span class="highlight-number">0</span>][<span class="highlight-number">0x48</span>L](local1);
+            <span class="highlight-keyword">if</span> (num != <span class="highlight-number">0</span>)
+            {
+                <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+            <span class="highlight-keyword">base</span>.AutoDelete = <span class="highlight-keyword">false</span>;
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">virtual</span> <span class="highlight-keyword">void</span> AddNewlyCreatedDBObject(DBObject obj, [MarshalAs(UnmanagedType.U1)] <span class="highlight-keyword">bool</span> add)
+        {
+            <span class="highlight-keyword">this</span>.TransactionManager.AddNewlyCreatedDBObject(obj, add);
+        }
+
+        <span class="highlight-keyword">private</span> <span class="highlight-keyword">unsafe</span> <span class="highlight-keyword">void</span> CheckTopTransaction()
+        {
+            AcDbTransactionManager* managerPtr = AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj());
+            <span class="highlight-keyword">if</span> (<span class="highlight-keyword">this</span>.GetImpObj() != **(((<span class="highlight-keyword">long</span>*) managerPtr))[<span class="highlight-number">0x58</span>L](managerPtr))
+            {
+                <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> InvalidOperationException();
+            }
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">virtual</span> <span class="highlight-keyword">unsafe</span> <span class="highlight-keyword">void</span> Commit()
+        {
+            <span class="highlight-keyword">this</span>.CheckTopTransaction();
+            AcDbTransactionManager* modopt(CallConvCdecl) local1 = AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj());
+            <span class="highlight-keyword">int</span> num = (<span class="highlight-keyword">int</span>) *local1[<span class="highlight-number">0</span>][<span class="highlight-number">0x40</span>L](local1);
+            <span class="highlight-keyword">if</span> (num != <span class="highlight-number">0</span>)
+            {
+                <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+            <span class="highlight-keyword">base</span>.AutoDelete = <span class="highlight-keyword">false</span>;
+        }
+
+        <span class="highlight-keyword">protected</span> <span class="highlight-keyword">override</span> <span class="highlight-keyword">unsafe</span> <span class="highlight-keyword">void</span> DeleteUnmanagedObject()
+        {
+            <span class="highlight-keyword">this</span>.CheckTopTransaction();
+            AcDbTransactionManager* modopt(CallConvCdecl) local1 = AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj());
+            <span class="highlight-keyword">int</span> num = (<span class="highlight-keyword">int</span>) *local1[<span class="highlight-number">0</span>][<span class="highlight-number">0x48</span>L](local1);
+            <span class="highlight-keyword">if</span> (num != <span class="highlight-number">0</span>)
+            {
+                <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">unsafe</span> DBObjectCollection GetAllObjects()
+        {
+            DBObjectCollection objects = <span class="highlight-keyword">new</span> DBObjectCollection();
+            AcTransaction* impObj = <span class="highlight-keyword">this</span>.GetImpObj();
+            <span class="highlight-keyword">int</span> num = (<span class="highlight-keyword">int</span>) **(((<span class="highlight-keyword">long</span>*) impObj))[<span class="highlight-number">0x48</span>L](impObj, objects.GetImpObj());
+            <span class="highlight-keyword">if</span> (num != <span class="highlight-number">0</span>)
+            {
+                <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Autodesk.AutoCAD.Runtime.Exception((Autodesk.AutoCAD.Runtime.ErrorStatus) num);
+            }
+            <span class="highlight-keyword">return</span> objects;
+        }
+
+        <span class="highlight-keyword">internal</span> <span class="highlight-keyword">unsafe</span> AcTransaction* GetImpObj()
+        {
+            <span class="highlight-keyword">return</span> (AcTransaction*) <span class="highlight-keyword">base</span>.GetImpObj();
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">virtual</span> <span class="highlight-keyword">unsafe</span> DBObject GetObject(ObjectId id, Autodesk.AutoCAD.DatabaseServices.OpenMode mode)
+        {
+            <span class="highlight-keyword">this</span>.CheckTopTransaction();
+            <span class="highlight-keyword">return</span> Autodesk.AutoCAD.DatabaseServices.TransactionManager.GetObjectInternal(AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj()), id, mode, <span class="highlight-keyword">false</span>, <span class="highlight-keyword">false</span>);
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">virtual</span> <span class="highlight-keyword">unsafe</span> DBObject GetObject(ObjectId id, Autodesk.AutoCAD.DatabaseServices.OpenMode mode, [MarshalAs(UnmanagedType.U1)] <span class="highlight-keyword">bool</span> openErased)
+        {
+            <span class="highlight-keyword">this</span>.CheckTopTransaction();
+            <span class="highlight-keyword">return</span> Autodesk.AutoCAD.DatabaseServices.TransactionManager.GetObjectInternal(AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj()), id, mode, openErased, <span class="highlight-keyword">false</span>);
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">virtual</span> <span class="highlight-keyword">unsafe</span> DBObject GetObject(ObjectId id, Autodesk.AutoCAD.DatabaseServices.OpenMode mode, [MarshalAs(UnmanagedType.U1)] <span class="highlight-keyword">bool</span> openErased, [MarshalAs(UnmanagedType.U1)] <span class="highlight-keyword">bool</span> forceOpenOnLockedLayer)
+        {
+            <span class="highlight-keyword">this</span>.CheckTopTransaction();
+            <span class="highlight-keyword">return</span> Autodesk.AutoCAD.DatabaseServices.TransactionManager.GetObjectInternal(AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj()), id, mode, openErased, forceOpenOnLockedLayer);
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">virtual</span> Autodesk.AutoCAD.DatabaseServices.TransactionManager TransactionManager
+        {
+            <span class="highlight-keyword">get</span>
+            {
+                IntPtr unmanagedPointer = <span class="highlight-keyword">new</span> IntPtr(AcDbImpTransaction.transactionManager((AcDbImpTransaction* modopt(IsConst) modopt(IsConst)) <span class="highlight-keyword">this</span>.GetImpObj()));
+                <span class="highlight-keyword">return</span> (Autodesk.AutoCAD.DatabaseServices.TransactionManager) RXObject.Create(unmanagedPointer, <span class="highlight-keyword">false</span>);
+            }
+        }
+    }
+}</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAAACAAA");</script></div><div class="collapsibleAreaRegion" id="AppTransaction"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />AppTransaction</span></div><div id="ID2RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0EAABBAAA_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EAABBAAA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAABBAAA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAABBAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">namespace</span> Autodesk.AutoCAD.ApplicationServices
+{
+    <span class="highlight-keyword">using</span> Autodesk.AutoCAD.DatabaseServices;
+    <span class="highlight-keyword">using</span> System;
+    <span class="highlight-keyword">using</span> System.Runtime.InteropServices;
+
+    <span class="highlight-keyword">internal</span> <span class="highlight-keyword">sealed</span> <span class="highlight-keyword">class</span> AppTransaction : Transaction
+    {
+        <span class="highlight-keyword">private</span> Autodesk.AutoCAD.ApplicationServices.TransactionManager m_mgr;
+
+        <span class="highlight-keyword">protected</span> <span class="highlight-keyword">internal</span> AppTransaction(IntPtr unmanagedPointer, [MarshalAs(UnmanagedType.U1)] <span class="highlight-keyword">bool</span> autoDelete, Autodesk.AutoCAD.ApplicationServices.TransactionManager mgr) : <span class="highlight-keyword">base</span>(unmanagedPointer, autoDelete)
+        {
+            <span class="highlight-keyword">this</span>.m_mgr = mgr;
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">sealed</span> <span class="highlight-keyword">override</span> <span class="highlight-keyword">void</span> Commit()
+        {
+            <span class="highlight-keyword">base</span>.Commit();
+            ((Autodesk.AutoCAD.ApplicationServices.TransactionManager) <span class="highlight-keyword">this</span>.TransactionManager).FlushGraphics();
+        }
+
+        <span class="highlight-keyword">public</span> <span class="highlight-keyword">override</span> Autodesk.AutoCAD.DatabaseServices.TransactionManager TransactionManager
+        {
+            <span class="highlight-keyword">get</span>
+            {
+                <span class="highlight-keyword">return</span> <span class="highlight-keyword">this</span>.m_mgr;
+            }
+        }
+    }
+}</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAABBAAA");</script></div></div></div><div id="pageFooter" class="pageFooter" /></body></html>

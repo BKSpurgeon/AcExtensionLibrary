@@ -18,766 +18,788 @@ namespace Autodesk.AutoCAD.DatabaseServices
         /// <summary>
         /// Opens the BlockTable
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>BlockTable</returns>
         /// <exception cref="Exception"></exception>
-        /// <code></code>
-        public static BlockTable BlockTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        /// <example>
+        /// <code source=".\Content\Samples\Samplescsharp\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" language="cs" region="BlockTableTrx" />
+        /// <code source=".\Content\Samples\Samplesvb\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.vb" language="VB" region="BlockTableTrx" />
+        /// </example>
+        public static BlockTable BlockTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (BlockTable)trx.GetObject(db.BlockTableId, mode, false, false);
+            return (BlockTable)transaction.GetObject(database.BlockTableId, openMode, false, false);
         }
 
         /// <summary>
-        /// Blocks the table.
+        /// Opens the BlockTable
         /// </summary>
-        /// <param name="db">The database.</param>
+        /// <param name="database">The database.</param>
         /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static BlockTable BlockTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <returns>BlockTable</returns>
+        /// <exception cref="Exception"></exception>
+        /// <example>
+        /// <code source=".\Content\Samples\Samplescsharp\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" language="cs" region="BlockTable" />
+        /// <code source=".\Content\Samples\Samplesvb\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.vb" language="VB" region="BlockTable" />
+        /// </example>
+        public static BlockTable BlockTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.BlockTable(db.TransactionManager.TopTransaction, mode);
+            return database.BlockTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Dims the style table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>DimStyleTable</returns>
         /// <exception cref="Exception"></exception>
-        public static DimStyleTable DimStyleTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        /// <example>
+        /// <code source=".\Content\Samples\Samplescsharp\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" language="cs" region="DimStyleTableTrx" />
+        /// <code source=".\Content\Samples\Samplesvb\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.vb" language="VB" region="DimStyleTableTrx" />
+        /// </example>
+        public static DimStyleTable DimStyleTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DimStyleTable)trx.GetObject(db.DimStyleTableId, mode, false, false);
+            return (DimStyleTable)transaction.GetObject(database.DimStyleTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Dims the style table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DimStyleTable DimStyleTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>DimStyleTable</returns>
+        /// <example>
+        /// <code source=".\Content\Samples\Samplescsharp\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" language="cs" region="DimStyleTable" />
+        /// <code source=".\Content\Samples\Samplesvb\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.vb" language="VB" region="DimStyleTable" />
+        /// </example>
+        public static DimStyleTable DimStyleTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.DimStyleTable(db.TransactionManager.TopTransaction, mode);
+            return database.DimStyleTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Layers the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>LayerTable</returns>
         /// <exception cref="Exception"></exception>
-        public static LayerTable LayerTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        /// <example>
+        /// <code source=".\Content\Samples\Samplescsharp\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" language="cs" region="LayerTableTrx" />
+        /// <code source=".\Content\Samples\Samplesvb\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.vb" language="VB" region="LayerTableTrx" />
+        /// </example>
+        public static LayerTable LayerTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (LayerTable)trx.GetObject(db.LayerTableId, mode, false, false);
+            return (LayerTable)transaction.GetObject(database.LayerTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Layers the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static LayerTable LayerTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>LayerTable</returns>
+        /// <code source=".\Content\Samples\Samplescsharp\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" language="cs" region="LayerTable" />
+        /// <code source=".\Content\Samples\Samplesvb\AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.vb" language="VB" region="LayerTable" />
+        public static LayerTable LayerTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.LayerTable(db.TransactionManager.TopTransaction, mode);
+            return database.LayerTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Linetypes the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>LinetypeTable</returns>
         /// <exception cref="Exception"></exception>
-        public static LinetypeTable LinetypeTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static LinetypeTable LinetypeTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (LinetypeTable)trx.GetObject(db.LinetypeTableId, mode, false, false);
+            return (LinetypeTable)transaction.GetObject(database.LinetypeTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Linetypes the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static LinetypeTable LinetypeTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>LinetypeTable</returns>
+        public static LinetypeTable LinetypeTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.LinetypeTable(db.TransactionManager.TopTransaction, mode);
+            return database.LinetypeTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Regs the application table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>RegAppTable</returns>
         /// <exception cref="Exception"></exception>
-        public static RegAppTable RegAppTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static RegAppTable RegAppTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (RegAppTable)trx.GetObject(db.RegAppTableId, mode, false, false);
+            return (RegAppTable)transaction.GetObject(database.RegAppTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Regs the application table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static RegAppTable RegAppTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>RegAppTable</returns>
+        public static RegAppTable RegAppTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.RegAppTable(db.TransactionManager.TopTransaction, mode);
+            return database.RegAppTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Texts the style table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>TextStyleTable</returns>
         /// <exception cref="Exception"></exception>
-        public static TextStyleTable TextStyleTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static TextStyleTable TextStyleTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (TextStyleTable)trx.GetObject(db.TextStyleTableId, mode, false, false);
+            return (TextStyleTable)transaction.GetObject(database.TextStyleTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Texts the style table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static TextStyleTable TextStyleTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>TextStyleTable</returns>
+        public static TextStyleTable TextStyleTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.TextStyleTable(db.TransactionManager.TopTransaction, mode);
+            return database.TextStyleTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Standards the text style.
         /// </summary>
-        /// <param name="db">The database.</param>
+        /// <param name="database">The database.</param>
         /// <returns></returns>
-        public static ObjectId StandardTextStyle(this Database db)
+        public static ObjectId StandardTextStyle(this Database database)
         {
-            return SymbolUtilityServices.GetTextStyleStandardId(db);
+            return SymbolUtilityServices.GetTextStyleStandardId(database);
         }
 
         /// <summary>
         /// Continuouses the linetype identifier.
         /// </summary>
-        /// <param name="db">The database.</param>
+        /// <param name="database">The database.</param>
         /// <returns></returns>
-        public static ObjectId ContinuousLinetypeId(this Database db)
+        public static ObjectId ContinuousLinetypeId(this Database database)
         {
-            return SymbolUtilityServices.GetLinetypeContinuousId(db);
+            return SymbolUtilityServices.GetLinetypeContinuousId(database);
         }
 
         /// <summary>
         /// Standards the dim style.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
         /// <returns></returns>
-        public static ObjectId StandardDimStyle(this Database db, Transaction trx)
+        public static ObjectId StandardDimStyle(this Database database, Transaction transaction)
         {
-            var dimtbl = db.DimStyleTable(trx);
-            return dimtbl.Has(standard) ? dimtbl[standard] : db.Dimstyle;
+            var dimtbl = database.DimStyleTable(transaction);
+            return dimtbl.Has(standard) ? dimtbl[standard] : database.Dimstyle;
         }
 
         /// <summary>
         /// Standards the dim style.
         /// </summary>
-        /// <param name="db">The database.</param>
+        /// <param name="database">The database.</param>
         /// <returns></returns>
-        public static ObjectId StandardDimStyle(this Database db)
+        public static ObjectId StandardDimStyle(this Database database)
         {
-            return db.StandardDimStyle(db.TransactionManager.TopTransaction);
+            return database.StandardDimStyle(database.TransactionManager.TopTransaction);
         }
 
         /// <summary>
         /// Ucses the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>UcsTable</returns>
         /// <exception cref="Exception"></exception>
-        public static UcsTable UcsTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static UcsTable UcsTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (UcsTable)trx.GetObject(db.UcsTableId, mode, false, false);
+            return (UcsTable)transaction.GetObject(database.UcsTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Ucses the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static UcsTable UcsTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>UcsTable</returns>
+        public static UcsTable UcsTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.UcsTable(db.TransactionManager.TopTransaction, mode);
+            return database.UcsTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Viewports the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>ViewportTable</returns>
         /// <exception cref="Exception"></exception>
-        public static ViewportTable ViewportTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static ViewportTable ViewportTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (ViewportTable)trx.GetObject(db.ViewportTableId, mode, false, false);
+            return (ViewportTable)transaction.GetObject(database.ViewportTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Viewports the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static ViewportTable ViewportTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>ViewportTable</returns>
+        public static ViewportTable ViewportTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.ViewportTable(db.TransactionManager.TopTransaction, mode);
+            return database.ViewportTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Views the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>ViewTable</returns>
         /// <exception cref="Exception"></exception>
-        public static ViewTable ViewTable(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static ViewTable ViewTable(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (ViewTable)trx.GetObject(db.ViewTableId, mode, false, false);
+            return (ViewTable)transaction.GetObject(database.ViewTableId, openMode, false, false);
         }
 
         /// <summary>
         /// Views the table.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
         /// <returns></returns>
-        public static ViewTable ViewTable(this Database db, OpenMode mode = OpenMode.ForRead)
+        public static ViewTable ViewTable(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.ViewTable(db.TransactionManager.TopTransaction, mode);
+            return database.ViewTable(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Author: Tony Tanzillo
         /// Source: http://www.theswamp.org/index.php?topic=41311.msg464457#msg464457
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the BlockTableRecord for "ModelSpace"</returns>
         /// <exception cref="Exception"></exception>
-        public static BlockTableRecord ModelSpace(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static BlockTableRecord ModelSpace(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (BlockTableRecord)trx.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(db), mode, false, false);
+            return (BlockTableRecord)transaction.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(database), openMode, false, false);
         }
 
         /// <summary>
         /// Models the space.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static BlockTableRecord ModelSpace(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the BlockTableRecord for "ModelSpace"</returns>
+        public static BlockTableRecord ModelSpace(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.ModelSpace(db.TransactionManager.TopTransaction, mode);
+            return database.ModelSpace(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Author: Tony Tanzillo
         /// Source: http://www.theswamp.org/index.php?topic=41311.msg464457#msg464457
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the BlockTableRecord for the database's Current Space</returns>
         /// <exception cref="Exception"></exception>
-        public static BlockTableRecord CurrentSpace(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static BlockTableRecord CurrentSpace(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (BlockTableRecord)trx.GetObject(db.CurrentSpaceId, mode, false, false);
+            return (BlockTableRecord)transaction.GetObject(database.CurrentSpaceId, openMode, false, false);
         }
 
         /// <summary>
         /// Currents the space.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static BlockTableRecord CurrentSpace(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the BlockTableRecord for the database's Current Space</returns>
+        public static BlockTableRecord CurrentSpace(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.CurrentSpace(db.TransactionManager.TopTransaction, mode);
+            return database.CurrentSpace(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Nameds the object database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary that is the Named Object Dictionary</returns>
         /// <exception cref="Exception"></exception>
-        public static DBDictionary NamedObjectDBDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead)
+        public static DBDictionary NamedObjectDBDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DBDictionary)trx.GetObject(db.NamedObjectsDictionaryId, mode, false, false);
+            return (DBDictionary)transaction.GetObject(database.NamedObjectsDictionaryId, openMode, false, false);
         }
 
         /// <summary>
         /// Nameds the object database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DBDictionary NamedObjectDBDictionary(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary that is the Named Object Dictionary</returns>
+        public static DBDictionary NamedObjectDBDictionary(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.NamedObjectDBDictionary(db.TransactionManager.TopTransaction, mode);
+            return database.NamedObjectDBDictionary(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Groups the database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for Groups</returns>
         /// <exception cref="Exception"></exception>
-        public static DBDictionary GroupDBDictionary(this Database db, Transaction trx, OpenMode mode = OpenMode.ForRead)
+        public static DBDictionary GroupDBDictionary(this Database database, Transaction transaction, OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DBDictionary)trx.GetObject(db.GroupDictionaryId, mode, false, false);
+            return (DBDictionary)transaction.GetObject(database.GroupDictionaryId, openMode, false, false);
         }
 
         /// <summary>
         /// Groups the database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DBDictionary GroupDBDictionary(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for Groups</returns>
+        public static DBDictionary GroupDBDictionary(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.GroupDBDictionary(db.TransactionManager.TopTransaction, mode);
+            return database.GroupDBDictionary(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Mls the style database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for MLStyleDBDictionary</returns>
         /// <exception cref="Exception"></exception>
-        public static DBDictionary MLStyleDBDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead)
+        public static DBDictionary MLStyleDBDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DBDictionary)trx.GetObject(db.MLStyleDictionaryId, mode, false, false);
+            return (DBDictionary)transaction.GetObject(database.MLStyleDictionaryId, openMode, false, false);
         }
 
         /// <summary>
         /// Mls the style database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DBDictionary MLStyleDBDictionary(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for MLStyleDBDictionary</returns>
+        public static DBDictionary MLStyleDBDictionary(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.MLStyleDBDictionary(db.TransactionManager.TopTransaction, mode);
+            return database.MLStyleDBDictionary(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Standards the ml style.
         /// </summary>
-        /// <param name="db">The database.</param>
+        /// <param name="database">The database.</param>
         /// <returns></returns>
-        public static ObjectId StandardMLStyle(this Database db)
+        public static ObjectId StandardMLStyle(this Database database)
         {
-            return db.StandardMLStyle(db.TransactionManager.TopTransaction);
+            return database.StandardMLStyle(database.TransactionManager.TopTransaction);
         }
 
         /// <summary>
         /// Standards the ml style.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
         /// <returns></returns>
-        public static ObjectId StandardMLStyle(this Database db, Transaction trx)
+        public static ObjectId StandardMLStyle(this Database database, Transaction transaction)
         {
-            var mlDic = db.MLStyleDBDictionary(trx);
-            return mlDic.Contains(standard) ? mlDic.GetAt(standard) : db.CmlstyleID;
+            var mlDic = database.MLStyleDBDictionary(transaction);
+            return mlDic.Contains(standard) ? mlDic.GetAt(standard) : database.CmlstyleID;
         }
 
         /// <summary>
         /// Layouts the database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for Layouts</returns>
         /// <exception cref="Exception"></exception>
-        public static DBDictionary LayoutDBDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead)
+        public static DBDictionary LayoutDBDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DBDictionary)trx.GetObject(db.LayoutDictionaryId, mode, false, false);
+            return (DBDictionary)transaction.GetObject(database.LayoutDictionaryId, openMode, false, false);
         }
 
         /// <summary>
         /// Layouts the database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DBDictionary LayoutDBDictionary(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for Layouts</returns>
+        public static DBDictionary LayoutDBDictionary(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.LayoutDBDictionary(db.TransactionManager.TopTransaction, mode);
+            return database.LayoutDBDictionary(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Plots the settings database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for PlotSettings</returns>
         /// <exception cref="Exception"></exception>
-        public static DBDictionary PlotSettingsDBDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead)
+        public static DBDictionary PlotSettingsDBDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DBDictionary)trx.GetObject(db.PlotSettingsDictionaryId, mode, false, false);
+            return (DBDictionary)transaction.GetObject(database.PlotSettingsDictionaryId, openMode, false, false);
         }
 
         /// <summary>
         /// Plots the settings database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DBDictionary PlotSettingsDBDictionary(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for PlotSettings</returns>
+        public static DBDictionary PlotSettingsDBDictionary(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.PlotSettingsDBDictionary(db.TransactionManager.TopTransaction, mode);
+            return database.PlotSettingsDBDictionary(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Tables the style database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for TableStyles</returns>
         /// <exception cref="Exception"></exception>
-        public static DBDictionary TableStyleDBDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead)
+        public static DBDictionary TableStyleDBDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DBDictionary)trx.GetObject(db.TableStyleDictionaryId, mode, false, false);
+            return (DBDictionary)transaction.GetObject(database.TableStyleDictionaryId, openMode, false, false);
         }
 
         /// <summary>
         /// Tables the style database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DBDictionary TableStyleDBDictionary(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for TableStyles</returns>
+        public static DBDictionary TableStyleDBDictionary(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.TableStyleDBDictionary(db.TransactionManager.TopTransaction, mode);
+            return database.TableStyleDBDictionary(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// ms the leader style database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for MLeaderStyles</returns>
         /// <exception cref="Exception"></exception>
-        public static DBDictionary MLeaderStyleDBDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead)
+        public static DBDictionary MLeaderStyleDBDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            return (DBDictionary)trx.GetObject(db.MLeaderStyleDictionaryId, mode, false, false);
+            return (DBDictionary)transaction.GetObject(database.MLeaderStyleDictionaryId, openMode, false, false);
         }
 
         /// <summary>
         /// ms the leader style database dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
-        /// <returns></returns>
-        public static DBDictionary MLeaderStyleDBDictionary(this Database db, OpenMode mode = OpenMode.ForRead)
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
+        /// <returns>Returns the DbDictionary for MLeaderStyles</returns>
+        public static DBDictionary MLeaderStyleDBDictionary(this Database database, OpenMode openMode = OpenMode.ForRead)
         {
-            return db.MLeaderStyleDBDictionary(db.TransactionManager.TopTransaction, mode);
+            return database.MLeaderStyleDBDictionary(database.TransactionManager.TopTransaction, openMode);
         }
 
         /// <summary>
         /// Standards the m leader style.
         /// </summary>
-        /// <param name="db">The database.</param>
+        /// <param name="database">The database.</param>
         /// <returns></returns>
-        public static ObjectId StandardMLeaderStyle(this Database db)
+        public static ObjectId StandardMLeaderStyle(this Database database)
         {
-            return db.StandardMLeaderStyle(db.TransactionManager.TopTransaction);
+            return database.StandardMLeaderStyle(database.TransactionManager.TopTransaction);
         }
 
         /// <summary>
         /// Standards the m leader style.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
         /// <returns></returns>
-        public static ObjectId StandardMLeaderStyle(this Database db, Transaction trx)
+        public static ObjectId StandardMLeaderStyle(this Database database, Transaction transaction)
         {
-            var mlDic = db.MLeaderStyleDBDictionary(trx);
-            return mlDic.Contains(standard) ? mlDic.GetAt(standard) : db.MLeaderstyle;
+            var mlDic = database.MLeaderStyleDBDictionary(transaction);
+            return mlDic.Contains(standard) ? mlDic.GetAt(standard) : database.MLeaderstyle;
         }
 
         /// <summary>
         /// Groups the dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
         /// <param name="includingErased">if set to <c>true</c> [including erased].</param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static GroupDictionary GroupDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead, bool includingErased = false)
+        public static GroupDictionary GroupDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead, bool includingErased = false)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            DBDictionary dic = (DBDictionary)trx.GetObject(db.GroupDictionaryId, mode, false, false);
+            DBDictionary dic = (DBDictionary)transaction.GetObject(database.GroupDictionaryId, openMode, false, false);
             return includingErased
-                ? new GroupDictionary(trx, dic, includingErased)
-                : new GroupDictionary(trx, dic.IncludingErased, includingErased);
+                ? new GroupDictionary(transaction, dic, includingErased)
+                : new GroupDictionary(transaction, dic.IncludingErased, includingErased);
         }
 
         /// <summary>
         /// Groups the dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
         /// <param name="includingErased">if set to <c>true</c> [including erased].</param>
         /// <returns></returns>
-        public static GroupDictionary GroupDictionary(this Database db, OpenMode mode = OpenMode.ForRead,
+        public static GroupDictionary GroupDictionary(this Database database, OpenMode openMode = OpenMode.ForRead,
             bool includingErased = false)
         {
-            return db.GroupDictionary(db.TransactionManager.TopTransaction, mode, includingErased);
+            return database.GroupDictionary(database.TransactionManager.TopTransaction, openMode, includingErased);
         }
 
         /// <summary>
         /// Mls the style dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
         /// <param name="includingErased">if set to <c>true</c> [including erased].</param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static MLStyleDictionary MLStyleDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead, bool includingErased = false)
+        public static MLStyleDictionary MLStyleDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead, bool includingErased = false)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            DBDictionary dic = (DBDictionary)trx.GetObject(db.MLStyleDictionaryId, mode, false, false);
+            DBDictionary dic = (DBDictionary)transaction.GetObject(database.MLStyleDictionaryId, openMode, false, false);
             return includingErased
-                ? new MLStyleDictionary(trx, dic, includingErased)
-                : new MLStyleDictionary(trx, dic.IncludingErased, includingErased);
+                ? new MLStyleDictionary(transaction, dic, includingErased)
+                : new MLStyleDictionary(transaction, dic.IncludingErased, includingErased);
         }
 
         /// <summary>
         /// Mls the style dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
         /// <param name="includingErased">if set to <c>true</c> [including erased].</param>
         /// <returns></returns>
-        public static MLStyleDictionary MLStyleDictionary(this Database db, OpenMode mode = OpenMode.ForRead,
+        public static MLStyleDictionary MLStyleDictionary(this Database database, OpenMode openMode = OpenMode.ForRead,
             bool includingErased = false)
         {
-            return db.MLStyleDictionary(db.TransactionManager.TopTransaction, mode, includingErased);
+            return database.MLStyleDictionary(database.TransactionManager.TopTransaction, openMode, includingErased);
         }
 
         /// <summary>
         /// Layouts the dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="trx">The TRX.</param>
-        /// <param name="mode">The mode.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="transaction">The transaction.</param>
+        /// <param name="openMode">The openMode.</param>
         /// <param name="includingErased">if set to <c>true</c> [including erased].</param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static LayoutDictionary LayoutDictionary(this Database db, Transaction trx,
-            OpenMode mode = OpenMode.ForRead, bool includingErased = false)
+        public static LayoutDictionary LayoutDictionary(this Database database, Transaction transaction,
+            OpenMode openMode = OpenMode.ForRead, bool includingErased = false)
         {
-            if (trx == null)
+            if (transaction == null)
             {
                 throw new Exception(ErrorStatus.NoActiveTransactions);
             }
-            DBDictionary dic = (DBDictionary)trx.GetObject(db.LayoutDictionaryId, mode, false, false);
+            DBDictionary dic = (DBDictionary)transaction.GetObject(database.LayoutDictionaryId, openMode, false, false);
             return includingErased
-                ? new LayoutDictionary(trx, dic, includingErased)
-                : new LayoutDictionary(trx, dic.IncludingErased, includingErased);
+                ? new LayoutDictionary(transaction, dic, includingErased)
+                : new LayoutDictionary(transaction, dic.IncludingErased, includingErased);
         }
 
         /// <summary>
         /// Layouts the dictionary.
         /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="mode">The mode.</param>
+        /// <param name="database">The database.</param>
+        /// <param name="openMode">The openMode.</param>
         /// <param name="includingErased">if set to <c>true</c> [including erased].</param>
         /// <returns></returns>
-        public static LayoutDictionary LayoutDictionary(this Database db, OpenMode mode = OpenMode.ForRead,
+        public static LayoutDictionary LayoutDictionary(this Database database, OpenMode openMode = OpenMode.ForRead,
             bool includingErased = false)
         {
-            return db.LayoutDictionary(db.TransactionManager.TopTransaction, mode, includingErased);
+            return database.LayoutDictionary(database.TransactionManager.TopTransaction, openMode, includingErased);
         }
 
-        /// <summary>
-        /// Revisions the number.
-        /// </summary>
-        /// <param name="db">The database.</param>
-        /// <returns></returns>
-        public static int RevisionNumber(this Database db)
-        {
-            DatabaseSummaryInfo info = db.SummaryInfo;
-            string revisionNumberString = info.RevisionNumber;
-            int revisionNumber;
-            if (!revisionNumberString.IsNullOrEmpty())
-            {
-                if (Int32.TryParse(revisionNumberString, out revisionNumber))
-                {
-                    return revisionNumber;
-                }
-            }
-            revisionNumber = 0;
-            DatabaseSummaryInfoBuilder infoBuilder = new DatabaseSummaryInfoBuilder(info);
-            infoBuilder.RevisionNumber = revisionNumber.ToString();
-            db.SummaryInfo = infoBuilder.ToDatabaseSummaryInfo();
-            return revisionNumber;
-        }
+        ///// <summary>
+        ///// Revisions the number.
+        ///// </summary>
+        ///// <param name="database">The database.</param>
+        ///// <returns></returns>
+        //public static int RevisionNumber(this Database database)
+        //{
+        //    DatabaseSummaryInfo info = database.SummaryInfo;
+        //    string revisionNumberString = info.RevisionNumber;
+        //    int revisionNumber;
+        //    if (!revisionNumberString.IsNullOrEmpty())
+        //    {
+        //        if (Int32.TryParse(revisionNumberString, out revisionNumber))
+        //        {
+        //            return revisionNumber;
+        //        }
+        //    }
+        //    revisionNumber = 0;
+        //    DatabaseSummaryInfoBuilder infoBuilder = new DatabaseSummaryInfoBuilder(info);
+        //    infoBuilder.RevisionNumber = revisionNumber.ToString();
+        //    database.SummaryInfo = infoBuilder.ToDatabaseSummaryInfo();
+        //    return revisionNumber;
+        //}
 
-        /// <summary>
-        /// Increments the revision number.
-        /// </summary>
-        /// <param name="db">The database.</param>
-        /// <returns></returns>
-        public static int IncrementRevisionNumber(this Database db)
-        {
-            return db.AddToRevisionNumber(1);
-        }
+        ///// <summary>
+        ///// Increments the revision number.
+        ///// </summary>
+        ///// <param name="database">The database.</param>
+        ///// <returns></returns>
+        //public static int IncrementRevisionNumber(this Database database)
+        //{
+        //    return database.AddToRevisionNumber(1);
+        //}
 
-        /// <summary>
-        /// Adds to revision number.
-        /// </summary>
-        /// <param name="db">The database.</param>
-        /// <param name="number">The number.</param>
-        /// <returns></returns>
-        public static int AddToRevisionNumber(this Database db, int number)
-        {
-            DatabaseSummaryInfo info = db.SummaryInfo;
-            string revisionNumberString = info.RevisionNumber;
-            int revisionNumber;
-            if (revisionNumberString.IsNullOrEmpty() || !Int32.TryParse(revisionNumberString, out revisionNumber))
-            {
-                revisionNumber = 0;
-            }
+        ///// <summary>
+        ///// Adds to revision number.
+        ///// </summary>
+        ///// <param name="database">The database.</param>
+        ///// <param name="number">The number.</param>
+        ///// <returns></returns>
+        //public static int AddToRevisionNumber(this Database database, int number)
+        //{
+        //    DatabaseSummaryInfo info = database.SummaryInfo;
+        //    string revisionNumberString = info.RevisionNumber;
+        //    int revisionNumber;
+        //    if (revisionNumberString.IsNullOrEmpty() || !Int32.TryParse(revisionNumberString, out revisionNumber))
+        //    {
+        //        revisionNumber = 0;
+        //    }
 
-            int newRevisionNum = revisionNumber + number;
-            if (newRevisionNum < 0)
-            {
-                newRevisionNum = 0;
-            }
-            DatabaseSummaryInfoBuilder infoBuilder = new DatabaseSummaryInfoBuilder(db.SummaryInfo);
-            infoBuilder.RevisionNumber = newRevisionNum.ToString();
-            db.SummaryInfo = infoBuilder.ToDatabaseSummaryInfo();
-            return newRevisionNum;
-        }
+        //    int newRevisionNum = revisionNumber + number;
+        //    if (newRevisionNum < 0)
+        //    {
+        //        newRevisionNum = 0;
+        //    }
+        //    DatabaseSummaryInfoBuilder infoBuilder = new DatabaseSummaryInfoBuilder(database.SummaryInfo);
+        //    infoBuilder.RevisionNumber = newRevisionNum.ToString();
+        //    database.SummaryInfo = infoBuilder.ToDatabaseSummaryInfo();
+        //    return newRevisionNum;
+        //}
     }
 }

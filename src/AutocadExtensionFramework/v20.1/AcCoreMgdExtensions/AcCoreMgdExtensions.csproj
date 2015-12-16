@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationServices\NamespaceDoc.cs" />
     <Compile Include="ApplicationServices\Core\EnviromentVariables.cs" />
     <Compile Include="ApplicationServices\Core\SystemVariables.cs" />
     <Compile Include="ApplicationServices\Core\TemporaryVariables.cs" />

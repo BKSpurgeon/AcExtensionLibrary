@@ -1175,17 +1175,17 @@ namespace Autodesk.AutoCAD.DatabaseServices
     public enum SymbolTableRecordFilter
     {
         /// <summary>
-        /// The none
+        /// No filter is used
         /// </summary>
         None = 0,
 
         /// <summary>
-        /// The included erased
+        /// Includes erased entities
         /// </summary>
         IncludedErased = 1,
 
         /// <summary>
-        /// The include dependent
+        /// This returns symboltablerecords from xref's
         /// </summary>
         IncludeDependent = 2,
 

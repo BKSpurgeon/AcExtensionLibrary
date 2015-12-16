@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>AcCoreMgdExtensions</name>
+  </assembly>
+  <members>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.TransactionManagerExtensions">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.TransactionManagerExtensions.StartLockedTransaction(Autodesk.AutoCAD.ApplicationServices.TransactionManager)">
+      <summary>
+            Stars the locked transaction.
+            </summary>
+      <param name="tm">The tm.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.TransactionManagerExtensions.StartLockedTransaction(Autodesk.AutoCAD.ApplicationServices.TransactionManager,Autodesk.AutoCAD.ApplicationServices.DocumentLockMode,System.String,System.String,System.Boolean)">
+      <summary>
+            Stars the locked transaction.
+            </summary>
+      <param name="tm">The tm.</param>
+      <param name="lockMode">The lock mode.</param>
+      <param name="globalCommandName">Name of the global command.</param>
+      <param name="localCommandName">Name of the local command.</param>
+      <param name="promptIfFails">if set to <c>true</c> [prompt if fails].</param>
+      <returns></returns>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.Core.EnviromentVariables">
+      <summary></summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.EnviromentVariables.ACAD">
+      <summary>
+            Gets or sets the acad.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.EnviromentVariables.QnewTemplate">
+      <summary>
+            Gets or sets the qnew template.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.EnviromentVariables.SheetSetTemplatePath">
+      <summary>
+            Gets or sets the sheet set template path.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.Core.Settings.#ctor"></member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.Variables">
+      <summary>
+            Gets the variables.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables">
+      <summary></summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.APERTURE">
+      <summary>
+            Gets or sets the aperture.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.ATTDIA">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is attdia.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.ATTREQ">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is attreq.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.BLOCKEDITOR">
+      <summary>
+            Gets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is blockeditor.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CLAYER">
+      <summary>
+            Gets or sets the clayer.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CLAYERID">
+      <summary>
+            Gets or sets the clayerid.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CMDECHO">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is cmdecho.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CMDNAMES">
+      <summary>
+            Gets the cmdnames.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CMLEADERSTYLE">
+      <summary>
+            Gets or sets the cmleaderstyle.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CTAB">
+      <summary>
+            Gets or sets the ctab.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CURSORSIZE">
+      <summary>
+            Gets or sets the cursorsize.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.CVPORT">
+      <summary>
+            Gets or sets the cvport.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.DCTCUST">
+      <summary>
+            Gets or sets the dctcust.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.DWGNAME">
+      <summary>
+            Gets the dwgname.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.DWGPREFIX">
+      <summary>
+            Gets the dwgprefix.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.DWGTITLED">
+      <summary>
+            Gets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is dwgtitled.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.FILEDIA">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is filedia.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.GROUPDISPLAYMODE">
+      <summary>
+            Gets or sets the groupdisplaymode.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.INSUNITS">
+      <summary>
+            Gets or sets the insunits.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.Item(System.String)">
+      <summary>
+            Gets or sets the <see cref="T:System.Object" /> with the specified name.
+            </summary>
+      <param name="name">The name.</param>
+      <returns></returns>
+      <exception cref="T:System.ArgumentNullException">{0} is Empty or Null</exception>
+      <exception cref="T:System.ArgumentException">
+            InvalidName
+            or
+            </exception>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.LWUNITS">
+      <summary>
+            Gets or sets the lwunits.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.MENUNAME">
+      <summary>
+            Gets the menuname.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.MLEADERSCALE">
+      <summary>
+            Gets or sets the mleaderscale.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.NEXTFIBERWORLD">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is nextfiberworld.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.OSMODE">
+      <summary>
+            Gets or sets the osmode.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.PICKSTYLE">
+      <summary>
+            Gets or sets the pickstyle.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.SAVETIME">
+      <summary>
+            Gets or sets the savetime.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.SHORTCUTMENU">
+      <summary>
+            Gets or sets the shortcutmenu.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.STARTMODE">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is startmode.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.STARTUP">
+      <summary>
+            Gets or sets the startup.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.TEXTALLCAPS">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is textallcaps.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.TEXTEVAL">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is texteval.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.TEXTSIZE">
+      <summary>
+            Gets or sets the textsize.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.TEXTSTYLE">
+      <summary>
+            Gets or sets the textstyle.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.UCSFOLLOW">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is ucsfollow.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables.WSAUTOSAVE">
+      <summary>
+            Gets or sets a value indicating whether this <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.Settings.SystemVariables" /> is wsautosave.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.ApplicationServices.Core.TemporarySystemVariables">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.Core.TemporarySystemVariables.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.ApplicationServices.Core.TemporarySystemVariables" /> class.
+            </summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.ApplicationServices.Core.TemporarySystemVariables.Dispose">
+      <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.ApplicationServices.Core.TemporarySystemVariables.Item(System.String)">
+      <summary>
+            Gets or sets the <see cref="T:System.Object" /> with the specified name.
+            </summary>
+      <param name="name">The name.</param>
+      <returns></returns>
+    </member>
+    <member name="T:Autodesk.AutoCAD.EditorInput.AllowedClassFilter">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.AllowedClassFilter.#ctor(System.Type[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.EditorInput.AllowedClassFilter" /> class.
+            </summary>
+      <param name="types">The types.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.AllowedClassFilter.AddAllowedClass(System.Type)">
+      <summary>
+            Adds the allowed class.
+            </summary>
+      <param name="type">The type.</param>
+    </member>
+    <member name="T:Autodesk.AutoCAD.EditorInput.EditorExtensions">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.GetSelection(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.EditorInput.AllowedClassFilter)">
+      <summary>
+            Gets the selection.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="classFilter">The class filter.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.GetSelection(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.EditorInput.PromptSelectionOptions,Autodesk.AutoCAD.EditorInput.AllowedClassFilter)">
+      <summary>
+            Gets the selection.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="options">The options.</param>
+      <param name="classFilter">The class filter.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.GetSelection(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.EditorInput.PromptSelectionOptions,Autodesk.AutoCAD.EditorInput.SelectionFilter,Autodesk.AutoCAD.EditorInput.AllowedClassFilter)">
+      <summary>
+            Gets the selection.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="options">The options.</param>
+      <param name="filter">The filter.</param>
+      <param name="classFilter">The class filter.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.GetSelection(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.EditorInput.SelectionFilter,Autodesk.AutoCAD.EditorInput.AllowedClassFilter)">
+      <summary>
+            Gets the selection.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="filter">The filter.</param>
+      <param name="classFilter">The class filter.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.DatabaseServices.ObjectId)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.Geometry.Point2d)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.Geometry.Point3d)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Boolean)">
+      <summary>
+            Writes the text representation of the specified Boolean val to the CommandLine
+            </summary>
+      <param name="ed">Extension method of Editor</param>
+      <param name="value">The val to write.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Char)">
+      <summary>
+            Writes the specified Unicode character val to the CommandLine
+            </summary>
+      <param name="ed">Extension method of Editor</param>
+      <param name="value">The val to write.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Char[])">
+      <summary>
+            Writes the specified subarray of Unicode characters to the CommandLine
+            </summary>
+      <param name="ed">Extension method of Editor</param>
+      <param name="buffer">A Unicode character array.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Char[],System.Int32,System.Int32)">
+      <summary>
+            Writes the specified subarray of Unicode characters to the CommandLine
+            </summary>
+      <param name="ed">Extension method of Editor</param>
+      <param name="buffer">An array of Unicode characters.</param>
+      <param name="index">The starting position in buffer.</param>
+      <param name="count">The number of characters to write.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown if buffer is null</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">Thrown if index is less than zero.</exception>
+      <exception cref="T:System.ArgumentException">Thrown if index plus count specify a position that is not within buffer.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">Thrown if index is less than zero.</exception>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Decimal)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Double)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Int32)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Int64)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Object)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.Single)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.String)">
+      <summary>
+            Writes the specified value.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object)">
+      <summary>
+            Writes the specified format.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg0">The arg0.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object,System.Object)">
+      <summary>
+            Writes the specified format.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg0">The arg0.</param>
+      <param name="arg1">The arg1.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object,System.Object,System.Object)">
+      <summary>
+            Writes the specified format.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg0">The arg0.</param>
+      <param name="arg1">The arg1.</param>
+      <param name="arg2">The arg2.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.Write(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object[])">
+      <summary>
+            Writes the specified format.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg">The argument.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.DatabaseServices.ObjectId)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.Geometry.Point2d)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,Autodesk.AutoCAD.Geometry.Point3d)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Boolean)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">if set to <c>true</c> [value].</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Char)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Char[])">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="buffer">The buffer.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Char[],System.Int32,System.Int32)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="buffer">The buffer.</param>
+      <param name="index">The index.</param>
+      <param name="count">The count.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine``1(Autodesk.AutoCAD.EditorInput.Editor,System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="items">The items.</param>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Decimal)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Double)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Int32)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Int64)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Object)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.Single)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.String)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="value">The value.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg0">The arg0.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object,System.Object)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg0">The arg0.</param>
+      <param name="arg1">The arg1.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object,System.Object,System.Object)">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg0">The arg0.</param>
+      <param name="arg1">The arg1.</param>
+      <param name="arg2">The arg2.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.EditorExtensions.WriteLine(Autodesk.AutoCAD.EditorInput.Editor,System.String,System.Object[])">
+      <summary>
+            Writes the line.
+            </summary>
+      <param name="ed">The ed.</param>
+      <param name="format">The format.</param>
+      <param name="arg">The argument.</param>
+    </member>
+    <member name="T:Autodesk.AutoCAD.EditorInput.PromptKeywords">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.PromptKeywords.#ctor"></member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.PromptKeywords.SetKeywords(System.String)">
+      <summary>
+            Sets the keywords.
+            </summary>
+      <param name="meassageAndKeywords">The meassage and keywords.</param>
+      <returns></returns>
+      <exception cref="T:System.ArgumentNullException">meassageAndKeywords is empty, whitespaces, or null</exception>
+      <exception cref="T:System.ArgumentException">
+            meassageAndKeywords must contain \[\
+            or
+            meassageAndKeywords must contain \]\
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">\[\ must be before \]\ </exception>
+    </member>
+    <member name="M:Autodesk.AutoCAD.EditorInput.PromptKeywords.SetKeywords(System.String,System.String)">
+      <summary>
+            Sets the keywords.
+            </summary>
+      <param name="meassageAndKeywords">The meassage and keywords.</param>
+      <param name="defaultKeyword">The default keyword.</param>
+      <returns></returns>
+    </member>
+    <member name="T:Autodesk.AutoCAD.Runtime.CommandClass">
+      <summary>
+            Just refactored into own class from
+            Author: Kerry Brown
+            Source: http://www.theswamp.org/index.php?topic=37686.msg427172#msg427172
+            </summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.CommandClass.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.Runtime.CommandClass" /> class.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.Runtime.CommandClass.Db">
+      <summary>
+            Gets the database.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.Runtime.CommandClass.Doc">
+      <summary>
+            Gets the document.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.Runtime.CommandClass.Ed">
+      <summary>
+            Gets the ed.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.Runtime.ExtensionApplication">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.ExtensionApplication.Initialize">
+      <summary>
+            Initializes this instance.
+            </summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.ExtensionApplication.Terminate">
+      <summary>
+            Terminates this instance.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.Runtime.ICommandClass">
+      <summary></summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.Runtime.ICommandClass.Db">
+      <summary>
+            Gets the database.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.Runtime.ICommandClass.Doc">
+      <summary>
+            Gets the document.
+            </summary>
+    </member>
+    <member name="P:Autodesk.AutoCAD.Runtime.ICommandClass.Ed">
+      <summary>
+            Gets the ed.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.Runtime.LockedTransaction">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.LockedTransaction.#ctor(Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.ApplicationServices.DocumentLock)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.Runtime.LockedTransaction" /> class.
+            </summary>
+      <param name="trx">The TRX.</param>
+      <param name="docLock">The document lock.</param>
+    </member>
+    <member name="T:Autodesk.AutoCAD.Runtime.PerDocData">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.PerDocData.#ctor(Autodesk.AutoCAD.ApplicationServices.Document)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.Runtime.PerDocData" /> class.
+            </summary>
+      <param name="doc">The document.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.PerDocData.Create(Autodesk.AutoCAD.ApplicationServices.Document)">
+      <summary>
+            Creates the specified document.
+            </summary>
+      <param name="doc">The document.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.PerDocData.Dispose">
+      <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+    </member>
+    <member name="T:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables">
+      <summary></summary>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables.#ctor(Autodesk.AutoCAD.ApplicationServices.Document)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables" /> class.
+            </summary>
+      <param name="doc">The document.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables.#ctor(Autodesk.AutoCAD.DatabaseServices.Database)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables" /> class.
+            </summary>
+      <param name="db">The database.</param>
+    </member>
+    <member name="M:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables.#ctor(Autodesk.AutoCAD.DatabaseServices.Transaction)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables" /> class.
+            </summary>
+      <param name="trx">The TRX.</param>
+    </member>
+    <member name="P:Autodesk.AutoCAD.Runtime.TransactedSysytemVariables.TransactedVariables">
+      <summary>
+            Gets the transacted variables.
+            </summary>
+    </member>
+  </members>
+</doc>
