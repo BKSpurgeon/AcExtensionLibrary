@@ -15,7 +15,7 @@
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
     <OutputPath>Help\</OutputPath>
-    <HtmlHelpName>AcExtentionLibrary Documentation</HtmlHelpName>
+    <HtmlHelpName>AcExtensionLibrary Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <TransformComponentArguments>
       <Argument Key="logoFile" Value="" />
@@ -37,7 +37,7 @@
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>AcExtentionLibrary - v20.1</HelpTitle>
+    <HelpTitle>AcExtensionLibrary - v20.1</HelpTitle>
     <ContentPlacement>BelowNamespaces</ContentPlacement>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
