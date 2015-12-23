@@ -64,7 +64,7 @@
   <ItemGroup>
     <Compile Include="AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Misc\Class1.cs" />
+    <Compile Include="Misc\BlockCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
