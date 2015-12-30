@@ -5,18 +5,18 @@
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="f880c187-f684-4f54-a4c1-ca653b86874e" visible="True" title="AcExtensionLibrary Developers Guide">
-    <Topic id="8c85c7f0-39be-479e-9b78-a9a9733d1d90" visible="True" isExpanded="true" title="Containers">
+  <Topic id="f880c187-f684-4f54-a4c1-ca653b86874e" visible="True" isSelected="true" title="AcExtensionLibrary Developers Guide">
+    <Topic id="8c85c7f0-39be-479e-9b78-a9a9733d1d90" visible="True" title="Containers">
       <Topic id="7df5a97a-6090-4980-bca0-b1b68e5e8295" visible="True" title="Symbol Tables" />
       <Topic id="6a96fe2a-3653-444e-bfb6-f2f0f72a8345" visible="True" title="Dictionaries" />
     </Topic>
-    <Topic id="6fb6f345-ab8c-49a9-84fb-e855656c8624" visible="True" isExpanded="true" title="Transaction">
+    <Topic id="6fb6f345-ab8c-49a9-84fb-e855656c8624" visible="True" title="Transaction">
       <Topic id="2e20ed66-5a54-49ac-a91e-5e363857b004" visible="True" title="AcTransaction" />
       <Topic id="e6e35fea-88e8-4523-a249-e4fae9e8ecb3" visible="True" title="AcTransactionManager" />
     </Topic>
   </Topic>
   <Topic id="0c9f3a62-9fde-45d2-84ab-fff244fda59b" visible="True" apiParentMode="InsertAsChild" />
-  <Topic id="405743a2-11e5-40b6-93b4-bdb3b576ba44" visible="True" isSelected="true" title="Version History">
+  <Topic id="405743a2-11e5-40b6-93b4-bdb3b576ba44" visible="True" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>

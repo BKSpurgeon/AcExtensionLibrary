@@ -101,19 +101,21 @@
             Gets the block table records.
             </summary>
       <param name="symbolTbl">The symbol table.</param>
-      <param name="mode">The mode.</param>
-      <param name="filter">The filter.</param>
-      <returns></returns>
+      <param name="mode">OpenMode</param>
+      <param name="filter">
+        <see cref="T:Autodesk.AutoCAD.DatabaseServices.SymbolTableRecordFilter" />.</param>
+      <returns>IEnumerable{BlockTableRecord}</returns>
     </member>
     <member name="M:Autodesk.AutoCAD.DatabaseServices.BlockTableExtensions.GetBlockTableRecords(Autodesk.AutoCAD.DatabaseServices.BlockTable,Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.DatabaseServices.OpenMode,Autodesk.AutoCAD.DatabaseServices.SymbolTableRecordFilter)">
       <summary>
-            Gets the block table records.
-            </summary>
+             Gets the block table records.
+             </summary>
       <param name="symbolTbl">The symbol table.</param>
       <param name="trx">The TRX.</param>
       <param name="mode">The mode.</param>
-      <param name="filter">The filter.</param>
-      <returns></returns>
+      <param name="filter">
+        <see cref="T:Autodesk.AutoCAD.DatabaseServices.SymbolTableRecordFilter" />.</param>
+      <returns>IEnumerable{BlockTableRecord}</returns>
     </member>
     <member name="M:Autodesk.AutoCAD.DatabaseServices.BlockTableExtensions.GetUserCreatedBlockTableRecords(Autodesk.AutoCAD.DatabaseServices.BlockTable,Autodesk.AutoCAD.DatabaseServices.OpenMode)">
       <summary>

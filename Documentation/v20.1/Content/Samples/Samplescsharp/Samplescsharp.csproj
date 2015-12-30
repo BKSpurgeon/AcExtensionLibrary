@@ -62,6 +62,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcDbMgdExtensions\DatabaseServices\BlockTableExtensionsCommands.cs" />
+    <Compile Include="AcDbMgdExtensions\DatabaseServices\BlockTableRecordExtensionsCommands.cs" />
     <Compile Include="AcDbMgdExtensions\DatabaseServices\DatabaseExtensionsCommands.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Misc\BlockCommands.cs" />

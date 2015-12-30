@@ -1,6 +1,7 @@
 ﻿Imports Autodesk.AutoCAD.DatabaseServices
 Imports Autodesk.AutoCAD.EditorInput
 Imports Autodesk.AutoCAD.Runtime
+<Assembly: CommandClass(GetType(Samplesvb.AcDbMgdExtensions.DatabaseServices.DatabaseExtensionsCommands))>
 
 Namespace AcDbMgdExtensions.DatabaseServices
 

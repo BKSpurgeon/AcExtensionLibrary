@@ -3,6 +3,7 @@ using Autodesk.AutoCAD.EditorInput;
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 
+[assembly: CommandClass(typeof(Samplescsharp.AcDbMgdExtensions.DatabaseServices.DatabaseExtensionsCommands))]
 namespace Samplescsharp.AcDbMgdExtensions.DatabaseServices
 {
    
