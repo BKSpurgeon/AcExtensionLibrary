@@ -21,6 +21,7 @@ A library for working with AutoCAD managed libraries
 
 ### Documentation ###
 Contains a solution with a [sandcastle](https://github.com/EWSoftware/SHFB) project which uses the [Visual Studio Integration Package](https://ewsoftware.github.io/SHFB/html/b128ad2a-787e-48c7-b946-f6953080c386.htm) and the nuget package information can be found [here](https://www.nuget.org/packages/EWSoftware.SHFB). For a quick tutorial and overview see [Taming Sandcastle: A .NET Programmer's Guide to Documenting Your Code](https://www.simple-talk.com/dotnet/.net-tools/taming-sandcastle-a-.net-programmers-guide-to-documenting-your-code/) 
+
 You can download .chm at this [Link](https://github.com/Hpadgroup/AcExtensionLibrary/blob/master/Documentation/v20.1/Help/AcExtensionLibrary%20Documentation.chm?raw=true) and after downloading right-click and unblock.
 
 The folders under the documentation folder are basically what by default a sandcastle project will produce, and folders I added to help store content of documentation file.
