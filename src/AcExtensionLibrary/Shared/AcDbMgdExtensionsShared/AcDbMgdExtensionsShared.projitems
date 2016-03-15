@@ -39,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\TextStyleTableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\WrapperDBDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\Wrappers\WrapperDBDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DoubleExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)_Extensions\Drawing\BitmapExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)_Extensions\ObjectExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)_Extensions\StringExtensions.cs" />

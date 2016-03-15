@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace System
 {
@@ -69,5 +70,28 @@ namespace System
             str.ThrowIfNullOrWhiteSpace();
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str.ToLower());
         }
+
+
+        public static bool WCMATCH(this string text, params string[] patterns)
+        {
+            foreach (string pat in patterns)
+            {
+                string reg = s_wildcardToRegex(pat);
+                if (Regex.Match(text, reg).Success)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        ///////////source http://www.codeproject.com/Articles/11556/Converti​ng-Wildcards-to-Regexes
+        private static string s_wildcardToRegex(string pattern)
+        {
+            return Regex.Escape(pattern).Replace("\\*", ".*").Replace("\\?", ".");
+        }
     }
 }
+
+
+

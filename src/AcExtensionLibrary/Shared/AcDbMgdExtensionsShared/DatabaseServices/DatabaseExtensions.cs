@@ -216,6 +216,14 @@ namespace Autodesk.AutoCAD.DatabaseServices
             return SymbolUtilityServices.GetTextStyleStandardId(database);
         }
 
+
+
+        public static ObjectId StandardTableStyle(this Database database)
+        {
+            return database.TableStyleDBDictionary().GetAt(standard);
+        }
+
+
         /// <summary>
         /// Continuouses the linetype identifier.
         /// </summary>

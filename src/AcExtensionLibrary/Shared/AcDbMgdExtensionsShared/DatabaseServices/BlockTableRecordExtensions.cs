@@ -49,6 +49,16 @@ namespace Autodesk.AutoCAD.DatabaseServices
                 );
         }
 
+
+        public static IEnumerable<BlockTableRecord> NonLayoutBlocks(this IEnumerable<BlockTableRecord> source)
+        {
+            return source.Where(btr =>
+                !(
+                    btr.IsLayout ||
+                    btr.IsAProxy
+                    )
+                );
+        }
         /// <summary>
         /// Author: Tony Tanzillo
         /// Source: http://www.theswamp.org/index.php?topic=41311.msg464529#msg464529

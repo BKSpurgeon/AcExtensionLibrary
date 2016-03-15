@@ -45,7 +45,32 @@ namespace Autodesk.AutoCAD.DatabaseServices
             return dic.GetEntries<T>(dic.Database.TransactionManager.TopTransaction, mode, includingErased);
         }
 
+        public static IEnumerable<DBDictionaryEntry> GetEntries(this DBDictionary dic, Transaction trx,
+    OpenMode mode = OpenMode.ForRead, bool includingErased = false) 
+        {
+            if (trx == null)
+            {
+                throw new Exception(ErrorStatus.NoActiveTransactions);
+            }
+            foreach (var entry in includingErased ? dic.IncludingErased : dic)
+            {
+                yield return entry;
+            }
+        }
 
+        /// <summary>
+        /// Gets the entries.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dic">The dic.</param>
+        /// <param name="mode">The mode.</param>
+        /// <param name="includingErased">if set to <c>true</c> [including erased].</param>
+        /// <returns></returns>
+        public static IEnumerable<DBDictionaryEntry> GetEntries(this DBDictionary dic, OpenMode mode = OpenMode.ForRead,
+            bool includingErased = false)
+        {
+            return dic.GetEntries(dic.Database.TransactionManager.TopTransaction, mode, includingErased);
+        }
 
     }
 }
