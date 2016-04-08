@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\SymbolTableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\SymbolTableRecordExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\TextStyleTableExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\ViewTableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\WrapperDBDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseServices\Wrappers\WrapperDBDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DoubleExtensions.cs" />
