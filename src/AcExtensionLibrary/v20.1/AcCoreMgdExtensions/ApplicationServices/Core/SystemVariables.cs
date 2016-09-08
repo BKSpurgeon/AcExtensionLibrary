@@ -463,7 +463,17 @@ namespace Autodesk.AutoCAD.ApplicationServices.Core
             {
                 get { return GetSystemVariable<string>(); }
             }
-
+            /// <summary>
+            /// Gets or sets the LUPREC.
+            /// </summary>
+            /// <value>
+            /// The LUPREC.
+            /// </value>
+            public short LUPREC
+            {
+                get { return GetSystemVariable<short>(); }
+                set { SetSystemVariable(value); }
+            }
             /// <summary>
             /// Gets or sets a value indicating whether this <see cref="SystemVariables"/> is cmdecho.
             /// </summary>

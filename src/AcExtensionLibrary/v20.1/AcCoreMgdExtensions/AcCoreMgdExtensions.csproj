@@ -59,6 +59,7 @@
     <Compile Include="ApplicationServices\Core\SystemVariables.cs" />
     <Compile Include="ApplicationServices\Core\TemporaryVariables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\ClassIntPtr.cs" />
     <Compile Include="Runtime\PerDocData.cs" />
     <Compile Include="Runtime\TransactedSysytemVariables.cs" />
   </ItemGroup>
